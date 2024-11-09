@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+body {
+    font-family: "IBM Plex Mono",monospace;
+}
+.menu {
+    transform: scale(1.5)
+}
+
+@layer components {
+    .cnt {
+        @apply max-w-[1000px] mx-auto my-0 xl:max-w-[1200px] 2xl:max-w-[1500px];
+    }
+}

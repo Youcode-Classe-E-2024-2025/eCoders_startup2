@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Page</title>
+        <title>Chart</title>
         <link rel="stylesheet" href="../../CSS/style.css" />
     </head>
     <body>
@@ -13,19 +13,21 @@
                     <a href="../../../index.html" class="text-2xl font-semibold 2xl:text-4xl">Funiro</a>
                     <ul class="hidden md:flex items-center">
                         <li><a href="../products/products.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">Products</a></li>
-                        <li><a href="about.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">About</a></li>
-                        <li>
-                            <a href="../contact/contact.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">Contact</a></li>
+                        <li><a href="../about/about.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">About</a></li>
+                        <li><a href="../contact/contact.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">Contact</a></li>
                     </ul>
                     <div class="mobile-menu block md:hidden relative">
                         <div class="text-3xl cursor-pointer hover:scale-110 transition-transform select-none">&#9776;</div>
                         <ul class="mobile-menu--links absolute top-[150%] left-0 left-[-100px] flex flex-col gap-2 transition-all invisible opacity-0">
                             <li><a href="../products/products.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">Products</a></li>
-                            <li><a href="about.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">About</a></li>
-                            <li> <a href="../contact/contact.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">Contact</a></li>
+                            <li><a href="../about/about.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">About</a></li>
+                            <li><a href="../contact/contact.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">Contact</a></li>
                         </ul>
                     </div>
-                    <a href="../cart/cart.html" class="ml-auto px-4 py-2 hover:bg-slate-300 transition-colors shadow-sm">Cart</a>
+                    <a href="cart.html" class="ml-auto px-4 py-2 hover:bg-slate-300 transition-colors shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/></svg>
+                    </a>
                     <a href="#" class="profile rounded-full overflow-hidden w-10 h-10 2xl:w-14 2xl:h-14 bg-slate-400 shadow-sm shadow-black">
                         <!-- <img src="" alt="profile"> -->
                     </a>
@@ -46,14 +48,14 @@
                         <li><a href="../products/products.html">Products</a></li>
                         <li><a href="#">Rooms</a></li>
                         <li><a href="#">Inspirations</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="../about/about.html">About Us</a></li>
                         <li><a href="#">Terms & Policy</a></li>
                     </ul>
                     <ul class="flex flex-col gap-2 w-fit">
                         <h3 class="font-semibold text-base 2xl:text-2xl">Account</h3>
                         <li><a href="#">My Account</a></li>
                         <li><a href="#">Checkout</a></li>
-                        <li><a href="../cart/cart.html">My Cart</a></li>
+                        <li><a href="cart.html">My Cart</a></li>
                         <li><a href="#">My catalog</a></li>
                     </ul>
                     <ul class="gap-2 flex flex-col">
@@ -73,6 +75,6 @@
             </div>
         </footer>
         <script src="../../JS/main.js"></script>
-        <script src="about.js"></script>
+        <script src="cart.js"></script>
     </body>
 </html>
