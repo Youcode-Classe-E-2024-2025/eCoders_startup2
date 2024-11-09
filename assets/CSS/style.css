@@ -624,10 +624,6 @@ video {
   grid-column-start: 3;
 }
 
-.m-0 {
-  margin: 0px;
-}
-
 .ml-auto {
   margin-left: auto;
 }
@@ -830,22 +826,6 @@ video {
   padding-left: 0.5rem;
 }
 
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
-.pr-10 {
-  padding-right: 2.5rem;
-}
-
-.pl-0 {
-  padding-left: 0px;
-}
-
-.pr-0 {
-  padding-right: 0px;
-}
-
 .text-center {
   text-align: center;
 }
@@ -927,7 +907,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 1.5rem 2.5rem;
 }
 
 .hover\:scale-110:hover {
