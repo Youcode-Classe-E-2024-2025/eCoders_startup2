@@ -576,18 +576,6 @@ video {
   }
 }
 
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .cnt {
   margin-left: auto;
   margin-right: auto;
@@ -657,12 +645,16 @@ video {
   height: 2.5rem;
 }
 
-.h-\[774px\] {
-  height: 774px;
-}
-
 .h-7 {
   height: 1.75rem;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-\[774px\] {
+  height: 774px;
 }
 
 .w-10 {
@@ -684,6 +676,12 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.scale-100 {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -732,12 +730,28 @@ video {
   row-gap: 2.5rem;
 }
 
+.justify-self-start {
+  justify-self: start;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-t-\[1px\] {
@@ -753,9 +767,9 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.bg-amber-300 {
+.bg-\[\#e89f71\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(252 211 77 / var(--tw-bg-opacity));
+  background-color: rgb(232 159 113 / var(--tw-bg-opacity));
 }
 
 .bg-slate-100 {
@@ -773,22 +787,28 @@ video {
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#f9b08a\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 176 138 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#e89f71\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(232 159 113 / var(--tw-bg-opacity));
-}
-
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
 
+.bg-\[url\(\'https\:\/\/www\.newbalance\.com\/dw\/image\/v2\/AAGI_PRD\/on\/demandware\.static\/-\/Library-Sites-NBUS-NBCA\/default\/dwc7c26413\/images\/page-designer\/2024\/October\/NB-890_Comp_A1_Desktop\.jpg\'\)\] {
+  background-image: url('https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Library-Sites-NBUS-NBCA/default/dwc7c26413/images/page-designer/2024/October/NB-890_Comp_A1_Desktop.jpg');
+}
+
 .bg-split-70-30 {
   background-image: linear-gradient(to right, #F9F1E7 70%, #FCF8F3 70%);
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-10 {
@@ -796,9 +816,9 @@ video {
   padding-right: 2.5rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-4 {
@@ -836,11 +856,6 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -868,13 +883,27 @@ video {
   line-height: 1.5rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-semibold {
   font-weight: 600;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -940,6 +969,50 @@ body {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:w-80 {
+    width: 20rem;
+  }
+
+  .sm\:w-screen {
+    width: 100vw;
+  }
+
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:scale-50 {
+    --tw-scale-x: .5;
+    --tw-scale-y: .5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:-scale-50 {
+    --tw-scale-x: -.5;
+    --tw-scale-y: -.5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:-scale-100 {
+    --tw-scale-x: -1;
+    --tw-scale-y: -1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:-scale-150 {
+    --tw-scale-x: -1.5;
+    --tw-scale-y: -1.5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .sm\:scale-150 {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -948,11 +1021,21 @@ body {
   .md\:hidden {
     display: none;
   }
+
+  .md\:w-80 {
+    width: 20rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:col-start-5 {
     grid-column-start: 5;
+  }
+
+  .lg\:scale-150 {
+    --tw-scale-x: 1.5;
+    --tw-scale-y: 1.5;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:grid-cols-\[repeat\(5\2c 1fr\)\] {
