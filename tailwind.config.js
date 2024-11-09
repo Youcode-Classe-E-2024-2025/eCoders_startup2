@@ -6,6 +6,9 @@ module.exports = {
             backgroundImage: {
                 'split-70-30': 'linear-gradient(to right, #F9F1E7 70%, #FCF8F3 70%)',
               },
+            width: {
+                '86p': '85.7%',
+              },
         },
     },
     plugins: [],

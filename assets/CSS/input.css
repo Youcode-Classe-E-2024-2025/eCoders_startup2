@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
 body {
     font-family: "IBM Plex Mono", monospace;
 }
@@ -19,3 +23,6 @@ body {
         @apply max-w-[1000px] mx-auto my-0;
     }
 }
+
+
+

@@ -4,7 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Products Page</title>
-        <link rel="stylesheet" href="../../CSS/style.css" />
+       
+        <link rel="stylesheet" href="product.css" />
+         <link rel="stylesheet" href="../../CSS/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -95,8 +98,60 @@
                 </div>
             </nav>
         </header>
-        <main class="container"></main>
-        <footer class="mt-12 px-10">
+
+
+
+
+        <main class="   h-fit  w-86p m-auto mt-16  ">
+          
+            <section class="w-full h-fit flex items-center justify-between mb-16" id="filter_search">
+             <div class="filterContainer  flex items-center" id="filterContainer">
+               <select name="filter" class="bg-[#ffffff]  border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none"   id="fiterByCategorie"> 
+                <option value=""  disabled selected hidden>FILTER BY</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+                <option value="Kids">Kids</option>
+               </select>
+               <span class=" h-fit w-fit   text-black   -ml-8 mt-1  ">
+                <img class=" h-[15px] "  src="../../images/ArrowDown.png" alt="filter select arrow">
+               </span>
+               
+            </div>
+            <h1 class="font-bold text-[40px] ">#Products</h1>
+
+            <div class="filterContainer flex items-center" id="filterContainer">
+                <select name="filter" class="bg-[#ffffff] border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none"   id="fiterByCategorie"> 
+                 <option value=""  disabled selected hidden>SORT BY</option>
+                 <option value="A-Z">A-Z</option>
+                 <option value="Z-A">Z-A</option>
+                 <option value="-">Expensive</option>
+                 <option value="+">Cheapest</option>
+                </select>
+                <span class=" h-fit w-fit   text-black   -ml-8 mt-1  ">
+                 <img class=" h-[15px] "  src="../../images/ArrowDown.png" alt="filter select arrow">
+                </span>
+                
+             </div>
+
+            </section>
+
+           
+
+             
+
+
+
+
+
+
+
+
+        </main>
+
+
+
+
+        <footer class="mt-12 px-10 ">
             <div class="cnt py-12 border-t-[1px] border-solid border-black">
                 <div
                     class="grid grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-10"
