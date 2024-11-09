@@ -10,11 +10,16 @@
      height: 48px;
      width: 245px;
    }
-/* 
-   #productDisplay .productCard{
-    width: 23.15%;
-    
-   } */
+
+   .cardButtons{
+     
+    font-family: "IBM Plex Mono", monospace;
+     
+     font-size: 16px;
+     
+
+   }
+
    
 
 
