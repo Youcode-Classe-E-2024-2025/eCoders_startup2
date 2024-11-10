@@ -9,6 +9,10 @@ module.exports = {
             width: {
                 '86p': '85.7%',
               },
+              screens: {
+                'custom-1040': '1040px',
+                'max-800': { 'max': '800px' }, 
+              },
         },
     },
     plugins: [],

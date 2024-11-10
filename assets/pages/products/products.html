@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header class="h-[774px]">
+        <header class="h-fit">
             <nav class="w-full bg-split-70-30 text-base 2xl:text-2xl">
                 <div class="cnt py-6 flex gap-10 items-center px-5">
                     <a
@@ -93,7 +93,7 @@
 
         <main class="   h-fit  w-86p m-auto mt-16  ">
           
-            <section class="w-full h-fit flex items-center justify-between mb-16" id="filter_search">
+            <section class="w-full h-fit flex items-center justify-between mb-16 max-800:justify-around" id="filter_search">
              <div class="filterContainer  flex items-center" id="filterContainer">
                <select name="filter" class="bg-[#ffffff]  border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none"   id="fiterByCategorie"> 
                 <option value=""  disabled selected hidden>FILTER BY</option>
@@ -106,10 +106,10 @@
                </span>
                
             </div>
-            <h1 class="font-bold text-[40px] ">#Products</h1>
+            <h1 class="font-bold text-[40px] max-800:hidden ">#Products</h1>
 
             <div class="filterContainer flex items-center" id="filterContainer">
-                <select name="filter" class="bg-[#ffffff] border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none"   id="fiterByCategorie"> 
+                <select name="filter" class="bg-[#ffffff] border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none max-800:ml-5"   id="fiterByCategorie"> 
                  <option value=""  disabled selected hidden>SORT BY</option>
                  <option value="A-Z">A-Z</option>
                  <option value="Z-A">Z-A</option>
@@ -125,33 +125,186 @@
             </section>
 
             
-            <section class="productDisplay  h-fit w-full flex flex-wrap justify-between gap-2" id="productDisplay">
+            <section class="productDisplay  h-fit w-full flex flex-wrap  justify-around gap-2   custom-1040:justify-between custom-1040:gap-3  max-800:ml-8" id="productDisplay">
                             
 
-                <!-- ths is the final card form -->
-            
-            <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden">
-                
-                <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
-                <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full  object-cover transition duration-300 group-hover:opacity-50" />
-            
-               
-                    <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
-                      <h4 class="prodctName font-medium text-2xl">Lolito</h4>
-                    <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
-                    <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                <!-- this is the final card form -->
+
+
+                <div class="cardContainer w-fit h-fit mb-8 ">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
                    </div>
-            
-               
-                <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-            
-              
-                <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border  font-medium  " aria-label="Add to Cart">Add to Cart</button>
-                <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border  font-medium" aria-label="See Details">See Details</button>
-                </div>
-            </div>
-            
+
+
+                   <div class="cardContainer w-fit h-fit">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
+                   </div>
+
+                   <div class="cardContainer w-fit h-fit">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
+                   </div>
+
+                   <div class="cardContainer w-fit h-fit">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
+                   </div>
+
+                   <div class="cardContainer w-fit h-fit">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
+                   </div>
+
+                   <div class="cardContainer w-fit h-fit">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
+                   </div>
+
+                   <div class="cardContainer w-fit h-fit">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
+                   </div>
+
+                   <div class="cardContainer w-fit h-fit">
+                    <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden max-800:scale-90 max-800:max-w-[85%] max-800:max-h-[85%]">
+                        <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                        <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full object-cover transition duration-300 group-hover:opacity-50" />
+                    
+                        <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                          <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                          <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                          <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                        </div>
+                    
+                        <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                    
+                        <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
+                          <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="See Details">See Details</button>
+                        </div>
+                    </div>
+                    
+                   </div>
+        
+        
+
+
+          
+
 
               
 
