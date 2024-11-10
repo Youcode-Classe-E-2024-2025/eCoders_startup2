@@ -4,7 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Products Page</title>
-        <link rel="stylesheet" href="../../CSS/style.css" />
+       
+        <link rel="stylesheet" href="product.css" />
+         <link rel="stylesheet" href="../../CSS/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header class="h-[774px]">
@@ -84,7 +87,94 @@
                 </div>
             </nav>
         </header>
-        <footer class="mt-12 px-10">
+
+
+
+
+        <main class="   h-fit  w-86p m-auto mt-16  ">
+          
+            <section class="w-full h-fit flex items-center justify-between mb-16" id="filter_search">
+             <div class="filterContainer  flex items-center" id="filterContainer">
+               <select name="filter" class="bg-[#ffffff]  border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none"   id="fiterByCategorie"> 
+                <option value=""  disabled selected hidden>FILTER BY</option>
+                <option value="Men">Men</option>
+                <option value="Women">Women</option>
+                <option value="Kids">Kids</option>
+               </select>
+               <span class=" h-fit w-fit   text-black   -ml-8 mt-1  ">
+                <img class=" h-[15px] "  src="../../images/ArrowDown.png" alt="filter select arrow">
+               </span>
+               
+            </div>
+            <h1 class="font-bold text-[40px] ">#Products</h1>
+
+            <div class="filterContainer flex items-center" id="filterContainer">
+                <select name="filter" class="bg-[#ffffff] border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none"   id="fiterByCategorie"> 
+                 <option value=""  disabled selected hidden>SORT BY</option>
+                 <option value="A-Z">A-Z</option>
+                 <option value="Z-A">Z-A</option>
+                 <option value="-">Expensive</option>
+                 <option value="+">Cheapest</option>
+                </select>
+                <span class=" h-fit w-fit   text-black   -ml-8 mt-1  ">
+                 <img class=" h-[15px] "  src="../../images/ArrowDown.png" alt="filter select arrow">
+                </span>
+                
+             </div>
+
+            </section>
+
+            
+            <section class="productDisplay  h-fit w-full flex flex-wrap justify-between gap-2" id="productDisplay">
+                            
+
+                <!-- ths is the final card form -->
+            
+            <div class="productCard group bg-[#F6F6F8] w-[285px] h-[446px] relative overflow-hidden">
+                
+                <div class="circle absolute w-12 h-12 bg-[#2EC1AC] rounded-full text-white font-medium flex items-center justify-center left-3/4 top-6">New</div>
+                <img src="../../images/mt41506bk_nb_70_i.webp" alt="" class="w-full  object-cover transition duration-300 group-hover:opacity-50" />
+            
+               
+                    <div class="cardData flex flex-col gap-4 p-4 transition duration-300 group-hover:opacity-50">
+                      <h4 class="prodctName font-medium text-2xl">Lolito</h4>
+                    <h6 class="productDescription font-medium text-[#898989] text-base">Luxury big sofa</h6>
+                    <h2 class="productPrice font-semibold text-3xl">$166.43</h2>
+                   </div>
+            
+               
+                <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+            
+              
+                <div class="cardButtons absolute inset-0 flex pt-7 flex-col items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border  font-medium  " aria-label="Add to Cart">Add to Cart</button>
+                <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border  font-medium" aria-label="See Details">See Details</button>
+                </div>
+            </div>
+            
+
+              
+
+
+
+            </section>
+           
+
+             
+
+
+
+
+
+
+
+
+        </main>
+
+
+
+
+        <footer class="mt-12 px-10 ">
             <div class="cnt py-12 border-t-[1px] border-solid border-black">
                 <div
                     class="text-[12px] 2xl:text-xl grid grid-cols-[repeat(2,1fr)] sm:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-10"
