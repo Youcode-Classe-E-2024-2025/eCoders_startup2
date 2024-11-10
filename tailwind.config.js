@@ -12,6 +12,11 @@ module.exports = {
         colgri: "#CCC8C9",
       },
     },
+    screens: {
+      sm: "320px",
+      md: "768px",
+      lg: "1024px",
+    },
   },
   plugins: [],
 };
