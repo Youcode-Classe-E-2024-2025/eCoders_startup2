@@ -8,6 +8,8 @@ module.exports = {
       },
       backgroundColor: {
         bgElm: "#F9F1E7",
+        colgre: "#B7D0C1",
+        colgri: "#CCC8C9",
       },
     },
   },
