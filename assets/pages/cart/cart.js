@@ -34,7 +34,20 @@ document.addEventListener("DOMContentLoaded", () => {
         checkoutPrice.textContent = `$${(subT + shipping)}`
     }
 
-    
+    function deleteItem(ev) {
+        const el = ev.target.closest(".cart-item");
+        el.remove();
+        updateCount();
+        updatePrice();
+    }
+
+    document.querySelectorAll(".delete-btn").forEach(btn => {
+        btn.addEventListener("click", deleteItem);
+    });
+
+    document.querySelectorAll(".quantity").forEach(input => {
+        input.addEventListener("input", updatePrice)
+    });
 
     updateCount();
     updatePrice();
