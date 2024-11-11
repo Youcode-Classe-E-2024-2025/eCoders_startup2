@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="">
-      <nav class="w-10/12 bg-split-70-30 text-base 2xl:text-2xl">
+      <nav class="w-full bg-split-70-30 text-base 2xl:text-2xl">
         <div class="cnt py-6 flex gap-10 items-center px-5">
           <a
             href="../../../index.html"
@@ -72,7 +72,7 @@
           </div>
           <a
             href="../cart/cart.html"
-            class="ml-auto hover:bg-slate-300 transition-colors shadow-sm"
+            class="ml-auto px-4 py-2 hover:bg-slate-300 transition-colors shadow-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,6 +93,7 @@
             href="#"
             class="profile rounded-full overflow-hidden w-10 h-10 2xl:w-14 2xl:h-14 bg-slate-400 shadow-sm shadow-black"
           >
+            <!-- <img src="" alt="profile"> -->
           </a>
         </div>
       </nav>
@@ -112,22 +113,22 @@
               <img
                 src="../../images/detailproduct.png"
                 alt="Product Image"
-                class="w-[300px] h-[300px] rounded-lg border border-gray-300 shadow-md"
+                class="w-[300px] h-[200px] rounded-lg border border-gray-300 shadow-md"
               />
 
-              <div class="flex sm:w-9 md:w-16 lg:w-18 gap-x-3">
+              <div class="flex w-20 h-20 shadow-md border-gray-400 gap-x-3">
                 <img
-                  src="https://nb.scene7.com/is/image/NB/m108014g_nb_05_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+                  src="../../images/detailproduct.png"
                   alt="Additional Product Image 3"
                   class="rounded-lg cursor-pointer border border-gray-300 shadow-md"
                 />
                 <img
-                  src="https://nb.scene7.com/is/image/NB/m108014g_nb_05_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+                  src="../../images/detailproduct2.png"
                   alt="Additional Product Image 3"
                   class="rounded-lg cursor-pointer border border-gray-300 shadow-md"
                 />
                 <img
-                  src="https://nb.scene7.com/is/image/NB/m108014g_nb_05_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+                  src="../../images/detailproduct3.png"
                   alt="Additional Product Image 3"
                   class="rounded-lg cursor-pointer border border-gray-300 shadow-md"
                 />
@@ -252,7 +253,7 @@
     <footer class="mt-12 px-10">
       <div class="cnt py-12 border-t-[1px] border-solid border-black">
         <div
-          class="text-[12px] 2xl:text-xl grid grid-cols-[repeat(2,1fr)] sm:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-10"
+          class="footer-links text-[12px] 2xl:text-xl grid grid-cols-[repeat(2,1fr)] sm:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-10"
         >
           <div class="flex flex-col gap-2 w-52">
             <h3 class="font-semibold text-base 2xl:text-2xl">Funiro.</h3>
@@ -265,17 +266,17 @@
           </div>
           <ul class="flex flex-col gap-2 w-fit">
             <h3 class="font-semibold text-base 2xl:text-2xl">Menu</h3>
-            <li><a href="assets/pages/products/products.html">Products</a></li>
+            <li><a href="../products/products.html">Products</a></li>
             <li><a href="#">Rooms</a></li>
             <li><a href="#">Inspirations</a></li>
-            <li><a href="assets/pages/about/about.html">About Us</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
             <li><a href="#">Terms & Policy</a></li>
           </ul>
           <ul class="flex flex-col gap-2 w-fit">
             <h3 class="font-semibold text-base 2xl:text-2xl">Account</h3>
             <li><a href="#">My Account</a></li>
             <li><a href="#">Checkout</a></li>
-            <li><a href="assets/pages/cart/cart.html">My Cart</a></li>
+            <li><a href="cart.html">My Cart</a></li>
             <li><a href="#">My catalog</a></li>
           </ul>
           <ul class="gap-2 flex flex-col">
@@ -295,10 +296,10 @@
             <div class="flex">
               <input
                 type="email"
-                class="outline-none bg-stone-100 w-32 pl-2 py-1 text-sm"
+                class="outline-none bg-stone-100 w-[128px] h-[28px] pl-2 py-1 text-sm"
               />
               <button
-                class="flex justify-center items-center px-2 h-7 bg-[#e89f71]"
+                class="flex justify-center items-center px-2 h-[28px] bg-[#e89f71]"
               >
                 <svg
                   width="16"
@@ -319,6 +320,6 @@
       </div>
     </footer>
     <script src="../../JS/main.js"></script>
-    <script src="login.js"></script>
+    <script src="details.js"></script>
   </body>
 </html>
