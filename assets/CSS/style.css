@@ -554,46 +554,24 @@ video {
   display: none;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .cnt {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
   margin-bottom: 0px;
   max-width: 1000px;
+}
+
+@media (min-width: 1280px) {
+  .cnt {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .cnt {
+    max-width: 1500px;
+  }
 }
 
 .invisible {
@@ -620,8 +598,8 @@ video {
   top: 150%;
 }
 
-.col-start-3 {
-  grid-column-start: 3;
+.col-start-1 {
+  grid-column-start: 1;
 }
 
 .ml-auto {
@@ -648,6 +626,11 @@ video {
   display: none;
 }
 
+.size-4 {
+  width: 1rem;
+  height: 1rem;
+}
+
 .size-6 {
   width: 1.5rem;
   height: 1.5rem;
@@ -661,6 +644,10 @@ video {
   height: 1.75rem;
 }
 
+.h-\[28px\] {
+  height: 28px;
+}
+
 .h-\[774px\] {
   height: 774px;
 }
@@ -669,12 +656,20 @@ video {
   width: 2.5rem;
 }
 
-.w-32 {
-  width: 8rem;
+.w-40 {
+  width: 10rem;
 }
 
 .w-52 {
   width: 13rem;
+}
+
+.w-56 {
+  width: 14rem;
+}
+
+.w-\[128px\] {
+  width: 128px;
 }
 
 .w-fit {
@@ -696,8 +691,8 @@ video {
           user-select: none;
 }
 
-.grid-cols-\[repeat\(3\2c 1fr\)\] {
-  grid-template-columns: repeat(3,1fr);
+.grid-cols-\[repeat\(2\2c 1fr\)\] {
+  grid-template-columns: repeat(2,1fr);
 }
 
 .flex-col {
@@ -714,6 +709,10 @@ video {
 
 .justify-items-center {
   justify-items: center;
+}
+
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-10 {
@@ -866,6 +865,10 @@ video {
   opacity: 0;
 }
 
+.opacity-75 {
+  opacity: 0.75;
+}
+
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -900,6 +903,33 @@ video {
   transition-duration: 150ms;
 }
 
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+
+  .text-base {
+    font-size: 1.3rem;
+  }
+
+  .card-type svg{
+    width: 6rem;
+    height: 3rem;
+  }
+
+  .cnt {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+  }
+}
+
 body {
   font-family: "IBM Plex Mono", monospace;
 }
@@ -925,6 +955,16 @@ body {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:col-start-3 {
+    grid-column-start: 3;
+  }
+
+  .sm\:grid-cols-\[repeat\(3\2c 1fr\)\] {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
 @media (min-width: 768px) {
   .md\:flex {
     display: flex;
@@ -942,5 +982,30 @@ body {
 
   .lg\:grid-cols-\[repeat\(5\2c 1fr\)\] {
     grid-template-columns: repeat(5,1fr);
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:h-14 {
+    height: 3.5rem;
+  }
+
+  .\32xl\:w-14 {
+    width: 3.5rem;
+  }
+
+  .\32xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .\32xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .\32xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
