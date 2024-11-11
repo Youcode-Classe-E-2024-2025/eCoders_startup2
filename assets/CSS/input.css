@@ -13,6 +13,15 @@ body {
     margin: 0 auto;
     padding: 1.5rem 2.5rem;
 }
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+}
+.font-nunito {
+    font-family: "Nunito", sans-serif;
+}
+.font-raleway {
+    font-family: "Raleway", sans-serif;
+}
 
 @layer components {
     .cnt {

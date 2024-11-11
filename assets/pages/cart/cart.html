@@ -5,6 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cart</title>
         <link rel="stylesheet" href="../../CSS/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -41,11 +46,11 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
                         </svg>
-                        <strong class="font-semibold text-lg">Shopping Continue</strong>
+                        <strong class="font-poppins font-semibold text-lg">Shopping Continue</strong>
                     </div>
 
-                    <h2 class="text-2xl font-medium text-lg">Shopping cart</h2>
-                    <p class="count mb-8 font-medium text-sm">You have 3 items in your cart</p>
+                    <h2 class="font-poppins font-medium text-lg">Shopping cart</h2>
+                    <p class="count font-nunito mb-8 font-medium text-sm">You have 3 items in your cart</p>
 
                     <!-- Produit 1 -->
                     <div class="cart-item flex justify-between items-center pt-3.5 pr-4 pb-3.5 pl-2 rounded-xl shadow-md mb-6" data-price="681">
@@ -58,7 +63,7 @@
                             </div>
                         </div>
                         <div class="">
-                            <input type="number" value="1" min="1" class="quantity w-10 text-center font-semibold text-xl"/>
+                            <input type="number" value="1" min="1" class="quantity font-raleway w-10 text-center font-semibold text-xl"/>
                         </div>
                         <p class="item-price ml-3 font-semibold text-xl">$681</p>
                         <button class="delete-btn mr-2 cursor-pointer text-xl text-[#888]">
@@ -85,7 +90,7 @@
                             </div>
                         </div>
                         <div class="">
-                            <input type="number" value="1" min="1" class="quantity w-10 text-center font-semibold text-xl"/>
+                            <input type="number" value="1" min="1" class="quantity font-raleway w-10 text-center font-semibold text-xl"/>
                         </div>
                         <p class="item-price ml-3 font-semibold text-xl">$681</p>
                         <button class="delete-btn mr-2 cursor-pointer text-xl text-[#888]">
@@ -112,7 +117,7 @@
                             </div>
                         </div>
                         <div class="">
-                            <input type="number" value="1" min="1" class="quantity w-10 text-center font-semibold text-xl"/>
+                            <input type="number" value="1" min="1" class="quantity font-raleway w-10 text-center font-semibold text-xl"/>
                         </div>
                         <p class="item-price ml-3 font-semibold text-xl">$681</p>
                         <button class="delete-btn mr-2 cursor-pointer text-xl text-[#888]">
@@ -132,7 +137,7 @@
                 <!-- Section Détails de la carte -->
                 <div class="card-details w-[38%] bg-[#e89f71] p-4 text-sm rounded-xl text-[#fff]">
                     <h2 class="text-2xl text-[#fff] mb-8">Card Details</h2>
-                    <h4 class="mb-2">Card type</h4>
+                    <h4 class="mb-2 text-base">Card type</h4>
                     <div class="card-type flex gap-[0.63rem] mb-5 items-center">
 
                         <svg width="97" height="71" viewBox="0 0 97 71" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -195,9 +200,15 @@
                         <p class="flex justify-between my-3 mx-0">Shipping <span>$4</span></p>
                         <p class="flex justify-between mt-3 mb-7 mx-0">Total (Tax incl.) <span class="total">$1,072</span></p>
                     </div>
-                    <button class="checkout-btn w-full py-4 px-6 bg-[#45dfbd] text-white font-bold rounded-lg cursor-pointer hover:bg-[#4de4c3] my-4 flex justify-between ">
+                    <button class="checkout-btn w-full py-4 px-6 bg-[#45dfbd] text-white font-semibold rounded-lg cursor-pointer hover:bg-[#4de4c3] my-4 flex justify-between text-base">
                         <span>$1,672</span>
-                        <span>Checkout &nbsp; &nbsp; &RightArrow;</span>
+                        <div class="flex items-center ">
+                            <span class="mr-5">Checkout</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                                <path fill-rule="evenodd" d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                          
                     </button>
                 </div>
             </div>
@@ -235,7 +246,7 @@
                     <form class="flex flex-col gap-4 col-start-1 sm:col-start-3 lg:col-start-5">
                         <label class="text-base font-semibold text-center 2xl:text-2xl" for="">Stay Updated</label>
                         <div class="flex">
-                            <input type="email" class="outline-none bg-stone-100 w-[128px] h-[28px] pl-2 py-1 text-sm" placeholder="Enter your email"/>
+                            <input type="email" class="outline-none bg-stone-100 w-[140px] h-[28px] px-2 py-1 mr-0.5 text-[10px] font-normal" placeholder="Enter your email"/>
                             <button class="flex justify-center items-center px-2 h-[28px] bg-[#e89f71]">
                                 <svg width="16" height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M496 16 15.88 208 195 289 448 64 223 317l81 179L496 16z" fill="#ffffff" class="fill-000000"></path>
