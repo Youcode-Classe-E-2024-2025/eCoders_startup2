@@ -14,8 +14,19 @@ body {
     padding: 1.5rem 2.5rem;
 }
 
+
 @layer components {
     .cnt {
         @apply max-w-[1000px] mx-auto my-0 xl:max-w-[1200px] 2xl:max-w-[1500px];
     }
+}
+@layer components {
+    .dot-active {
+        @apply ring ring-1 ring-offset-4 ring-orange-400;
+        background-color: orange !important;
+    }
+}
+
+.landing-slides {
+    box-shadow: 0 2px 5px 1px gray;
 }

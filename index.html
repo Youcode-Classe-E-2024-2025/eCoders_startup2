@@ -16,7 +16,7 @@
         <header class="h-[774px] bg-split-70-30">
             <nav class="w-full bg-split-70-30 text-base 2xl:text-2xl">
                 <div class="cnt py-6 flex gap-10 items-center px-5">
-                    <a href="index.html" class="text-2xl font-semibold 2xl:text-4xl">Funiro</a>
+                    <a href="index.html" class="text-xl  md:text-3xl  font-semibold  2xl:text-4xl">Funiro</a>
                     <ul class="hidden md:flex items-center">
                         <li><a href="assets/pages/products/products.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">Products</a>
                         </li>
@@ -27,7 +27,7 @@
                     </ul>
                     <div class="mobile-menu block md:hidden relative">
                         <div class="text-3xl cursor-pointer hover:scale-110 transition-transform select-none">&#9776;</div>
-                        <ul class="mobile-menu--links absolute top-[150%] left-0 left-[-100px] flex flex-col gap-2 transition-all invisible opacity-0">
+                        <ul class="mobile-menu--links absolute z-30 top-[150%] left-0 left-[-100px] flex flex-col gap-2 transition-all invisible opacity-0">
                             <li><a href="assets/pages/products/products.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">Products</a></li>
                             <li><a href="assets/pages/about/about.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">About</a></li>
                             <li><a href="assets/pages/contact/contact.html" class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors">Contact</a></li>
@@ -43,7 +43,36 @@
                     </a>
                 </div>
             </nav>
+            <section id="landing-section">
+                <div class="cnt max-w-[1730px] mx-auto">
+                    <div class="landing-carrousel w-full relative">
+                        <div class="landing-carrousel-arrows flex gap-1 md:gap-3 absolute top-4 right-10 md:top-3 md:right-20 ">
+                            <button class="arrow arrow-left w-7 h-7 md:w-10 md:h-10 rounded-full flex justify-center items-center bg-orange-200 text-white"><</button>
+                            <button class="arrow arrow-right w-7 h-7 md:w-10 md:h-10 rounded-full flex justify-center items-center bg-orange-300 text-white">></button>
+                        </div>
+                        <div class="landing-carrousel-dots w-fit flex mx-auto gap-2 md:gap-5 py-7"></div>
+                        <div class="landing-slides relative flex gap-2 overflow-hidden w-full ">
+                            <div class="landing-slide w-[90%] md:w-[60%] flex-shrink-0 absolute top-0 left-[50%] px-1 transition-transform duration-700 shadow-sm ">
+                                <img src="assets/images/emptyimg.jpg" alt="">
+                            </div>
+                            <div class="landing-slide w-[90%] md:w-[60%] flex-shrink-0 absolute top-0 left-[50%] px-1 transition-transform duration-700 shadow-sm ">
+                                <img src="assets/images/carrousel-img1.jpg" alt="">
+                            </div>
+                            <div class="landing-slide w-[90%] md:w-[60%] flex-shrink-0 absolute top-0 left-[50%] px-1 transition-transform duration-700 shadow-sm ">
+                                <img src="assets/images/carrousel-img2.jpg" alt="">
+                            </div>
+                            <div class="landing-slide w-[90%] md:w-[60%] flex-shrink-0 absolute top-0 left-[50%] px-1 transition-transform duration-700 shadow-sm ">
+                                <img src="assets/images/carrousel-img3.jpg" alt="">
+                            </div>
+                            <div class="landing-slide w-[90%] md:w-[60%] flex-shrink-0 absolute top-0 left-[50%] px-1 transition-transform duration-700 shadow-sm ">
+                                <img src="assets/images/emptyimg.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </header>
+        
         <footer class="mt-12 px-10">
             <div class="cnt py-12 border-t-[1px] border-solid border-black">
                 <div class="text-[12px] 2xl:text-xl grid grid-cols-[repeat(2,1fr)] sm:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-10">
