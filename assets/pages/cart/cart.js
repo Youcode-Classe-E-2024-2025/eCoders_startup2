@@ -135,3 +135,63 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const cartItems = document.querySelectorAll(".cart-item");
+    const subtotalElement = document.querySelector(".subtotal");
+    const totalElement = document.querySelector(".total");
+
+    const countItems = cartItems.length;
+    const subtotal = subtotalElement.textContent;
+    const total = totalElement.textContent;  
+    const title = "Order Quotation";
+    const sep = "========================================";
+
+    const pageWidth = doc.internal.pageSize.width;
+
+    const titleWidth = doc.getTextWidth(title);
+
+    const sepWidth = doc.getTextWidth(sep);
+
+    doc.setFontSize(18);
+    doc.setFont("helvetica", "bold");
+    
+    doc.text((pageWidth - titleWidth) / 2, 40, title);
+
+    let posY = 60;
+
+    doc.setFontSize(14);
+    doc.setFont("helvetica", "bold");
+    doc.text("Products:", 20, posY)
+
+    doc.setFontSize(12);
+    doc.setFont("helvetica", "normal")
+    
+    document.querySelectorAll(".cart-item").forEach((el, index) => {
+        const itemName = el.querySelector(".item-name").textContent;
+        const quantity = el.querySelector(".quantity").value;
+        const itemPrice = el.querySelector(".item-price").textContent;
+
+        doc.text(`${index + 1}. ${itemName}`, 30, posY + 10);
+        doc.text(`Quantity : ${quantity}`, 35, posY + 20);
+        doc.text(`Price : ${itemPrice}`, 35, posY + 30);
+        doc.text((pageWidth - sepWidth) / 2, posY + 40, sep);
+        posY += 40;
+
+    });
+
+    doc.setFontSize(12);
+    doc.setFont("helvetica", "bold");
+    doc.text(`Number of articles : ${countItems}`, 20, posY + 20);
+    doc.text(`Subtotal : ${subtotal}`, 20, posY + 30);
+    doc.text(`Total (incl. shipping) : ${total}`, 20, posY + 40);
+
+
+    doc.save("devis.pdf");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".download-btn").addEventListener("click", generatePDF);
+});
