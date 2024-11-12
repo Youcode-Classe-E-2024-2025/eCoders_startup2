@@ -3,15 +3,24 @@
 @tailwind utilities;
 
 body {
-    font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 .menu {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+.font-raleway {
+  font-family: "Raleway", sans-serif;
 }
 .font-poppins {
     font-family: "Poppins", sans-serif;
