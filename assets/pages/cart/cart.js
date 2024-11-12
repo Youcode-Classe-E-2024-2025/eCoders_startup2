@@ -52,4 +52,59 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCount();
     updatePrice();
 
+    document.querySelector(".checkout-btn").addEventListener("click", function (event) {
+        event.preventDefault();
+    
+        let valid = true; 
+    
+        const name = document.getElementById("name").value.trim();
+        const cardNumber = document.getElementById("card-number").value.trim();
+        const expiry = document.getElementById("expiry").value.trim();
+        const cvv = document.getElementById("cvv").value.trim();
+
+        const errorName = document.querySelector(".error-name");
+        const errorCard = document.querySelector(".error-card");
+        const errorExpiry = document.querySelector(".error-expiry");
+        const errorCvv = document.querySelector(".error-cvv");
+    
+        if (name === "") {
+            errorName.textContent = "Please enter the name on the card.";
+            valid = false;
+        }
+        else {
+            errorName.textContent = "";
+        }
+        
+        const cardNumberRegex = /^[0-9]{16}$/;
+        if (!cardNumberRegex.test(cardNumber)) {
+            errorCard.textContent = "Please enter a valid 16-digit card number.";
+            valid = false;
+        }
+        else {
+            errorCard.textContent = "";
+        }
+        
+        const expiryRegex = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/;
+        if (!expiryRegex.test(expiry)) {
+            errorExpiry.textContent = "Please enter a valid expiry date in MM/YY format.";
+            valid = false;
+        }
+        else {
+            errorExpiry.textContent = "";
+        }
+    
+        const cvvRegex = /^[0-9]{3}$/;
+        if (!cvvRegex.test(cvv)) {
+            errorCvv.textContent = "Please enter a valid 3-digit CVV.";
+            valid = false;
+        }
+        else {
+            errorCvv.textContent = "";
+        }
+    
+        if (valid) {
+            alert("Payment information is valid. Proceeding to payment...");
+        }
+    });
+
 });
