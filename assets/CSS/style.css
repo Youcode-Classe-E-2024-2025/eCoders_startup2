@@ -632,6 +632,14 @@ video {
   top: 150%;
 }
 
+.top-0 {
+  top: 0px;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -753,10 +761,6 @@ video {
   width: 13rem;
 }
 
-.w-56 {
-  width: 14rem;
-}
-
 .w-6 {
   width: 1.5rem;
 }
@@ -834,10 +838,6 @@ video {
 
 .justify-items-center {
   justify-items: center;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .gap-10 {
