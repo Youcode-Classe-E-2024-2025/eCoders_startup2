@@ -3,71 +3,80 @@
 @tailwind utilities;
 
 body {
-    font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 .menu {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+.font-raleway {
+  font-family: "Raleway", sans-serif;
 }
 
 @layer components {
-    .cnt {
-        @apply max-w-[1000px] mx-auto my-0 xl:max-w-[1200px] 2xl:max-w-[1500px];
-    }
+  .cnt {
+    @apply max-w-[1000px] mx-auto my-0 xl:max-w-[1200px] 2xl:max-w-[1500px];
+  }
 }
 
 @layer utilities {
-    @media (max-width: 768px) {
-      html {
-        font-size: 10px;
-      }
-      .text-base {
-        font-size: 1.3rem;
-      }
-      .card-type svg{
-        width: 6rem;
-        height: 3rem;
+  @media (max-width: 768px) {
+    html {
+      font-size: 10px;
+    }
+    .text-base {
+      font-size: 1.3rem;
+    }
+    .card-type svg {
+      width: 6rem;
+      height: 3rem;
     }
     .cnt {
-        padding-left: 3rem;
-        padding-right: 3rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
     }
     .footer-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 3rem;
     }
+  }
+  @media (max-width: 428px) {
+    .shopping-cnt {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
     }
-    @media (max-width: 428px) {
-        .shopping-cnt {
-            flex-direction: column;
-            align-items: center;
-            gap: 3rem;
-        }
-        .delete-btn svg {
-            width: 18px;
-            height: 18px;
-        }
-        .cart-section {
-            width: 90%;
-        }
-        .card-details {
-            width: 85%;
-        }
-        .expiration-cvv {
-            justify-content: space-between;
-        }
-        .card-type {
-            justify-content: space-between;
-        }
-        .card-type svg{
-            width: 6rem;
-            height: 3rem;
-        }
+    .delete-btn svg {
+      width: 18px;
+      height: 18px;
     }
+    .cart-section {
+      width: 90%;
+    }
+    .card-details {
+      width: 85%;
+    }
+    .expiration-cvv {
+      justify-content: space-between;
+    }
+    .card-type {
+      justify-content: space-between;
+    }
+    .card-type svg {
+      width: 6rem;
+      height: 3rem;
+    }
+  }
 }
