@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkoutPrice = document.querySelector(".checkout-btn span");
     const shipping = 4;
 
+    
+
     function updateCount() {
         const countItems = document.querySelectorAll(".cart-item").length;
         count.textContent = `You have ${countItems} items in your cart`;
@@ -29,9 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
         subtotalEl.textContent = `$${subT.toFixed(2)}`;
         // const shipping = 42;
-        totalEl.textContent = `$${subT + shipping}`;
+        totalEl.textContent = `$${(subT + shipping).toFixed(2)}`;
 
-        checkoutPrice.textContent = `$${(subT + shipping)}`
+        checkoutPrice.textContent = `$${(subT + shipping).toFixed(2)}`;
     }
 
     function deleteItem(ev) {
@@ -55,8 +57,22 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".checkout-btn").addEventListener("click", function (event) {
         event.preventDefault();
     
-        let valid = true; 
-    
+        if (validateForm()) {
+            // emptyErrors();
+            if (confirm("Payment information is valid. Proceeding to payment...")) {
+                document.querySelector(".download-btn").style.display = "block";
+            }
+        }
+    });
+
+    // function emptyErrors() {
+    //     errorName.textContent = "";
+    //     errorCard.textContent = "";
+    //     errorExpiry.textContent = "";
+    //     errorCvv.textContent = "";
+    // }
+
+    function validateForm() {
         const name = document.getElementById("name").value.trim();
         const cardNumber = document.getElementById("card-number").value.trim();
         const expiry = document.getElementById("expiry").value.trim();
@@ -66,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const errorCard = document.querySelector(".error-card");
         const errorExpiry = document.querySelector(".error-expiry");
         const errorCvv = document.querySelector(".error-cvv");
+    
+        let valid = true; 
     
         if (name === "") {
             errorName.textContent = "Please enter the name on the card.";
@@ -101,10 +119,19 @@ document.addEventListener("DOMContentLoaded", () => {
         else {
             errorCvv.textContent = "";
         }
-    
-        if (valid) {
-            alert("Payment information is valid. Proceeding to payment...");
-        }
-    });
 
+        return valid;
+    }
+
+    document.querySelector(".checkout-btn").addEventListener("click", validateForm);
+
+    document.getElementById("name").addEventListener("submit", validateForm);
+    document.getElementById("card-number").addEventListener("submit", validateForm);
+    document.getElementById("expiry").addEventListener("submit", validateForm);
+    document.getElementById("cvv").addEventListener("submit", validateForm);
+    // if (valid) {
+    //     alert("Payment information is valid. Proceeding to payment...");
+    // }
 });
+
+
