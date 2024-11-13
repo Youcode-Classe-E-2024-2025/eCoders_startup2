@@ -46,7 +46,7 @@ function changeLandingSlide(dir) {
     landingCarrouselDots.querySelectorAll('.dot')[currLandingSlide-1].classList.add('dot-active');
 }
 
-let csId = setInterval(()=>changeLandingSlide(1),7000);
+let csId = setInterval(()=>changeLandingSlide(1),4000);
 
 landingCarrouselArrows.addEventListener('click',e=>{
     if(!e.target.matches('.arrow')) return;
@@ -68,7 +68,7 @@ landingCarrouselDots.addEventListener('click',e=>{
 //landing carrousel--------------------------------------
 
 //product carrousel--------------------------------------
-function initializeCarousel(carouselContainer) {
+function initializeCarousel(carouselContainer,delay) {
     const products = carouselContainer.querySelectorAll('.product');
     const slidesContainer = carouselContainer.querySelector('.slides-container');
     const productsArrowLeft = carouselContainer.querySelector('.arrow-left');
@@ -86,10 +86,22 @@ function initializeCarousel(carouselContainer) {
         const offset = -translationsNum * translate;
         products.forEach(p => p.style.transform = `translateX(${offset}px)`);
     }
+    let csId = null;
+    setTimeout(()=>{
+        csId = setInterval(()=>changeProductSlide(1),3000)
+    },delay)
     
     // Set up event listeners for arrows
-    productsArrowLeft.addEventListener('click', () => changeProductSlide(-1));
-    productsArrowRight.addEventListener('click', () => changeProductSlide(1));
+    productsArrowLeft.addEventListener('click', () => {
+        changeProductSlide(-1);
+        clearInterval(csId);
+        csId = setInterval(()=>changeProductSlide(1),3000)
+});
+    productsArrowRight.addEventListener('click', () => {
+        changeProductSlide(1)
+        clearInterval(csId);
+        csId = setInterval(()=>changeProductSlide(1),3000);
+    });
     
     // Handle window resizing to recalculate position
     window.addEventListener('resize', () => changeProductSlide(0));
@@ -97,10 +109,10 @@ function initializeCarousel(carouselContainer) {
 
 // Initialize the first carousel
 const bestSellingCarousel = document.querySelector('#best-selling .product-carrousel');
-initializeCarousel(bestSellingCarousel);
+initializeCarousel(bestSellingCarousel,0);
 
 // Initialize the second carousel
 const newProductsCarousel = document.querySelector('#new-products .product-carrousel');
-initializeCarousel(newProductsCarousel);
+initializeCarousel(newProductsCarousel,1000);
 
 //product carrousel--------------------------------------
