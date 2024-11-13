@@ -21,6 +21,74 @@ body {
     }
 }
 @layer components {
+    .landing-carrousel {
+        @apply w-full relative;
+    }
+    .landing-carrousel .arrow {
+        @apply w-7 h-7 md:w-10 md:h-10 rounded-full flex justify-center items-center bg-orange-200 text-white hover:bg-orange-300 transition-colors;
+    }
+    .landing-carrousel .landing-carrousel-dots {
+        @apply w-fit flex mx-auto gap-2 md:gap-5 py-7;
+    }
+    .landing-carrousel .landing-slides {
+        @apply relative flex gap-2 overflow-hidden w-full;
+    }
+    .landing-carrousel .landing-slide {
+        @apply w-[90%] md:w-[60%]  flex-shrink-0 absolute top-0 left-[50%] px-1 transition-transform duration-700;
+    }
+    .landing-carrousel .landing-slide img {
+        @apply w-full;
+    }
+}
+@layer components {
+    .description-item {
+        @apply justify-center flex gap-5 items-center basis-[44%] md:basis-[24%];
+    }
+    .description-item svg {
+        @apply min-w-6 w-6 sm:min-w-8 sm:w-8;
+    }
+    .description-item h3 {
+        @apply font-semibold text-[10px] sm:text-sm
+    }
+    .description-item p {
+        @apply text-gray-500 text-[10px] sm:text-xs text-nowrap
+    }
+}
+@layer components {
+    .product {
+        @apply w-[33%] flex-shrink-0 aspect-1 transition-transform flex justify-center items-center;
+    }
+    .product .product-box {
+        @apply w-[90%] h-[90%] shadow-md shadow-gray-400 relative overflow-hidden;
+    }
+    .product img {
+        @apply translate-y-[-15%];
+    }
+    .product .product-text {
+        @apply text-[10px] md:text-sm lg:text-base w-full bg-white h-[30%] absolute left-0 bottom-0 z-10 px-2 sm:px-4 py-[.5px] sm:py-1 xl:py-3 flex flex-col justify-between items-center sm:items-start
+    }
+    .product .product-text h3, .product .product-text span {
+        @apply font-semibold;
+    }
+    .product .product-text p {
+        @apply text-[10px] md:text-xs hidden sm:block;
+    }
+}
+
+
+@layer components {
+    .carrousel-arrow {
+        @apply z-30 absolute top-1/2 translate-y-[-50%]  w-7 h-7 md:w-10 md:h-10 rounded-full flex justify-center items-center bg-stone-50 shadow-md text-black hover:bg-stone-200 transition-colors;
+    }
+}
+@layer components {
+    .slides-container {
+        @apply mx-auto overflow-hidden flex gap-[.5%] items-center relative;
+    }
+}
+
+
+@layer components {
     .dot-active {
         @apply ring ring-1 ring-offset-4 ring-orange-400;
         background-color: orange !important;
@@ -30,3 +98,4 @@ body {
 .s {
     background-color: aqua;
 }
+
