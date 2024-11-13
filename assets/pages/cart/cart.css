@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+    html {
+      font-size: 10px;
+    }
+    .text-base {
+      font-size: 1.3rem;
+    }
+    .card-type svg{
+      width: 6rem;
+      height: 3rem;
+    }
+  }
+  @media (max-width: 428px) {
+      .shopping-cnt {
+          flex-direction: column;
+          align-items: center;
+          gap: 3rem;
+      }
+      .delete-btn svg {
+          width: 18px;
+          height: 18px;
+      }
+      .cart-section {
+          width: 90%;
+      }
+      .card-details {
+          width: 85%;
+      }
+      .expiration-cvv {
+          justify-content: space-between;
+      }
+      .card-type {
+          justify-content: space-between;
+      }
+      .card-type svg{
+          width: 6rem;
+          height: 3rem;
+      }
+  }

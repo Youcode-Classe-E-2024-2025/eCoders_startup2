@@ -1,177 +1,43 @@
-const espadrilles = {
-    nike: [
-      { 
-        name: "Air Max", 
-        price: 130.99, 
-        description: "Confort et style emblématique.", 
-        quantity: 10, 
-        color: "#FFFFFF" 
-      },
-      { 
-        name: "Classic", 
-        price: 120.50, 
-        description: "Look intemporel pour toutes occasions.", 
-        quantity: 15, 
-        color: "#000000" 
-      },
-      { 
-        name: "Court Legacy", 
-        price: 110, 
-        description: "Légère et décontractée.", 
-        quantity: 8, 
-        color: "#00FF00" 
-      },
-      { 
-        name: "SB Flex", 
-        price: 100.75, 
-        description: "Performance et confort en un.", 
-        quantity: 12, 
-        color: "#808080" 
-      },
-      { 
-        name: "Zoom Air", 
-        price: 140, 
-        description: "Amorti supérieur et design moderne.", 
-        quantity: 9, 
-        color: "#D3D3D3" 
-      },
-      { 
-        name: "Revolution", 
-        price: 95.25, 
-        description: "Respirante et polyvalente.", 
-        quantity: 11, 
-        color: "#0000FF" 
-      },
-      { 
-        name: "Flex Runner", 
-        price: 85, 
-        description: "Légère pour une course optimale.", 
-        quantity: 14, 
-        color: "#000000" 
-      },
-      { 
-        name: "Quest", 
-        price: 125.49, 
-        description: "Excellent maintien et design moderne.", 
-        quantity: 10, 
-        color: "#FF0000" 
-      }
-    ],
-    adidas: [
-      { 
-        name: "Gazelle", 
-        price: 100.00, 
-        description: "Style rétro et confortable.", 
-        quantity: 10, 
-        color: "#FFFFFF" 
-      },
-      { 
-        name: "Stan Smith", 
-        price: 130, 
-        description: "Élégante pour tous les styles.", 
-        quantity: 12, 
-        color: "#00FF00" 
-      },
-      { 
-        name: "NMD", 
-        price: 150.99, 
-        description: "Touche urbaine et performance.", 
-        quantity: 9, 
-        color: "#808080" 
-      },
-      { 
-        name: "Superstar", 
-        price: 90.30, 
-        description: "Classique et intemporelle.", 
-        quantity: 8, 
-        color: "#FFFFFF" 
-      },
-      { 
-        name: "Ultraboost", 
-        price: 180.49, 
-        description: "Parfaite pour de longues marches.", 
-        quantity: 7, 
-        color: "#0000FF" 
-      },
-      { 
-        name: "Lite Racer", 
-        price: 85.00, 
-        description: "Légère et stylée.", 
-        quantity: 13, 
-        color: "#FF0000" 
-      },
-      { 
-        name: "Duramo", 
-        price: 90, 
-        description: "Polyvalente et confortable.", 
-        quantity: 11, 
-        color: "#000080" 
-      },
-      { 
-        name: "Samba", 
-        price: 95.75, 
-        description: "Style décontracté et classique.", 
-        quantity: 12, 
-        color: "#A52A2A" 
-      }
-    ],
-    newBalance: [
-      { 
-        name: "574", 
-        price: 110.25, 
-        description: "Confort et design rétro.", 
-        quantity: 10, 
-        color: "#808080" 
-      },
-      { 
-        name: "997", 
-        price: 120, 
-        description: "Confort pour une utilisation quotidienne.", 
-        quantity: 9, 
-        color: "#000080" 
-      },
-      { 
-        name: "990", 
-        price: 160.49, 
-        description: "Haute qualité et amorti supérieur.", 
-        quantity: 8, 
-        color: "#000000" 
-      },
-      { 
-        name: "550", 
-        price: 110, 
-        description: "Style moderne et polyvalent.", 
-        quantity: 11, 
-        color: "#D3D3D3" 
-      },
-      { 
-        name: "Fresh Foam", 
-        price: 130.75, 
-        description: "Légèreté et confort optimal.", 
-        quantity: 10, 
-        color: "#FFFFFF" 
-      },
-      { 
-        name: "1080", 
-        price: 140.99, 
-        description: "Pour des performances sportives.", 
-        quantity: 8, 
-        color: "#FFFF00" 
-      },
-      { 
-        name: "237", 
-        price: 105.49, 
-        description: "Élégante pour un usage quotidien.", 
-        quantity: 12, 
-        color: "#FF0000" 
-      },
-      { 
-        name: "373", 
-        price: 95.99, 
-        description: "Confort et style classique.", 
-        quantity: 14, 
-        color: "#FFFFFF" 
-      }
-    ]
-  };
-  
+export const products = [
+    // New Balance
+    {id: 1, name: "990v5", price: 166.43, img: "NB1.webp", gallerie: ["NB11.webp", "NB12.webp", "NB13.webp"], description: "Luxury sport shoe", category: "New Balance", quantity: 10, colors: ["#00443F", "#B9975E", "#3C6E72", "#E5E4DB"]},
+    {id: 2, name: " Foam 1080v12", price: 189.99, img: "NB2.webp", gallerie: ["NB21.webp", "NB22.webp", "NB23.webp"], description: "Comfortable running shoe", category: "New Balance", quantity: 5, colors: ["#111315"]},
+    {id: 3, name: "FuelCell Rebel", price: 230.00, img: "NB3.webp", gallerie: ["NB31.webp", "NB32.webp", "NB33.webp"], description: "Lightweight running shoe", category: "New Balance", quantity: 8, colors: ["#121353", "#73B8CD", "#F1EDD8"]},
+    {id: 4, name: "574 Core", price: 450.75, img: "NB4.webp", gallerie: ["NB41.webp", "NB42.webp", "NB43.webp"], description: "Classic casual shoe", category: "New Balance", quantity: 3, colors: ["#0F0C12"]},
+    {id: 5, name: "Vazee Pace", price: 299.99, img: "NB5.webp", gallerie: ["NB51.webp", "NB52.webp", "NB53.webp"], description: "Fast and flexible shoe", category: "New Balance", quantity: 7, colors: ["#7B8061", "#A4A590"]},
+    {id: 6, name: "890v7", price: 120.99, img: "NB6.webp", gallerie: ["NB61.webp", "NB62.webp", "NB63.webp"], description: "Sporty running shoe", category: "New Balance", quantity: 12, colors: ["#B1CFEB", "#04AF9B", "#DACFBE"]},
+    {id: 7, name: "990v4", price: 350.50, img: "NB7.webp", gallerie: ["NB71.webp", "NB72.webp", "NB73.webp"], description: "Comfortable lifestyle shoe", category: "New Balance", quantity: 6, colors: ["#A9A9A9", "#515355", "#BDBBB7"]},
+    {id: 8, name: "X-Racer", price: 90.00, img: "NB8.webp", gallerie: ["NB81.webp", "NB82.webp", "NB83.webp"], description: "Durable and fast shoe", category: "New Balance", quantity: 15, colors: ["#272427", "#EFEDEC"]},
+    {id: 9, name: "990v5", price: 49.99, img: "NB9.webp", gallerie: ["NB91.webp", "NB92.webp", "NB93.webp"], description: "High-performance shoe", category: "New Balance", quantity: 20, colors: ["#BFC0BB", "#F1F1F1"]},
+    {id: 10, name: " Foam 1080v12", price: 600.00, img: "NB10.webp", gallerie: ["NB101.webp", "NB102.webp", "NB103.webp"], description: "Cushioned running shoe", category: "New Balance", quantity: 4, colors: ["#045951", "#D0C6A0", "#F1F1F1"]},
+    {id: 11, name: "Vazee Pace", price: 600.00, img: "NB110.webp", gallerie: ["NB111.webp", "NB112.webp", "NB113.webp"], description: "Flexible performance shoe", category: "New Balance", quantity: 4, colors: ["#2A292E", "#F1F1F3", "#0A554C"]},
+    {id: 12, name: "574 Core", price: 600.00, img: "NB120.webp", gallerie: ["NB121.webp", "NB122.webp", "NB123.webp"], description: "Casual everyday shoe", category: "New Balance", quantity: 4, colors: ["#101014"]},
+    
+    // NIKE
+    {id: 13, name: "Air Max", price: 130.99, img: "nike/Nike-AIRMAX.png", gallerie: ["nike/Nike-AIRMAX-1.jpg", "nike/Nike-AIRMAX-2.jpg", "nike/Nike-AIRMAX-3.png"], description: "Confort et style emblématique.", category: "nike", quantity: 10, colors: ["#FFFFFF"]},
+    {id: 14, name: "Classic", price: 120.50, img: "nike/CLASSIC.png", gallerie: ["nike/CLASSIC-1.jpg", "nike/CLASSIC-2.jpg", "nike/CLASSIC-3.jpg"], description: "Look intemporel pour toutes occasions.", category: "nike", quantity: 15, colors: ["#000000"]},
+    {id: 15, name: "Court Legacy", price: 110.00, img: "nike/COURT-LEGACY.png", gallerie: ["nike/COURT-LEGACY-1.png", "nike/COURT-LEGACY-2.png", "nike/COURT-LEGACY-3.png"], description: "Légère et décontractée.", category: "nike", quantity: 8, colors: ["#00FF00"]},
+    {id: 16, name: "SB Flex", price: 100.75, img: "nike/SB-FORCE.png", gallerie: ["nike/SB-FORCE-1.jpg", "nike/SB-FORCE-2.jpg", "nike/SB-FORCE-3.png"], description: "Confort et style pour les skateurs.", category: "nike", quantity: 10, colors: ["#FF0000"]},
+    {id: 17, name: "Zoom Air", price: 140, img:"nike/ZOOM.png", gallerie: ["nike/ZOOM-1.png", "nike/ZOOM-2.png", "nike/ZOOM-3.png"], description: "Amorti supérieur et design moderne.", category: "nike", quantity: 9, colors: ["#D3D3D3"]},
+    {id: 18, name: "Revolution", price: 95.25, img: "REVOLUTION.jpg", gallerie: ["REVOLUTION-1.jpg", "REVOLUTION-2.jpg", "REVOLUTION-3.png"], description: "Respirante et polyvalente.", category: "nike", quantity: 11, colors: ["#0000FF"]},
+    {id: 19, name: "Flex Runner", price: 85, img: "nike/FLEX-RUNNER.png", gallerie: ["nike/FLEX-RUNNER-1.png", "nike/FLEX-RUNNER-2.jpg", "nike/FLEX-RUNNER-3.png"], description: "Légère pour une course optimale.", category: "nike", quantity: 14, colors: ["#000000"]},
+    {id: 20, name: "Quest", price: 125.49, img: "nike/QUEST.png", gallerie: ["nike/QUEST-1.jpg", "nike/QUEST-2.jpg", "nike/QUEST-3.png"], description: "Confort et style pour les coureurs.", category: "nike", quantity: 10, colors: ["#FF0000"]},
+    {id:21, name: "Jordan Stadium", price: 90.99, img: "nike/JORDAN-STADIUM.png", gallerie: ["nike/JORDAN-STADIUM-1.png", "nike/JORDAN-STADIUM-2.png", "nike/JORDAN-STADIUM-3.png"], description: "Chaussure pour homme.", category: "nike", quantity: 10, colors: ["#FF0000"]},
+    {id: 22, name: "Nike Full Force", price: 64.99, img: "nike/FULLFORCE.png", gallerie: ["nike/FULLFORCE-1.png", "nike/FULLFORCE-2.png", "nike/FULLFORCE-3.png"], description: "Chaussure pour homme.", category: "nike", quantity: 10, colors: ["#FF0000"]}, 
+    {id: 23, name: "Attack", price: 97.99, img: "nike/ATTACK.jpg", gallerie: ["nike/ATTACK-1.png", "nike/ATTACK-2.jpg", "nike/ATTACK-3.jpg"], description: "Chaussure pour homme.", category: "nike", quantity: 10, colors: ["#FF0000"]},
+    {id: 24, name: "Tech Hera", price: 125.49, img: "nike/TECH-HERA.png", gallerie: ["nike/TECH-HERA-1.png", "nike/TECH-HERA-2.png", "nike/TECH-HERA-3.png"], description: "Chaussure pour homme.", category: "nike", quantity: 10, colors: ["#FF0000"]}, 
+
+    // Adidas
+    {id: 25, name: "Gazelle", price: 100.00, img: "adidas/gazelle.png", gallerie: ["adidas/gazelle-1.png", "adidas/gazelle-2.png", "adidas/gazelle-3.png"], description: "Style rétro et confortable.", category: "adidas", quantity: 10, colors: ["#FFFFFF"]},
+    {id: 26, name: "Stan Smith", price: 130, img: "adidas/Stan-Smith.png", gallerie: ["adidas/Stan-Smith-1.png", "adidas/Stan-Smith-2.png", "adidas/Stan-Smith-3.png"], description: "Élégante pour tous les styles.", category: "adidas", quantity: 12, colors: ["#00FF00"]},   
+    {id: 27, name: "NMD", price: 150.99, img: "adidas/NMD.png", gallerie: ["adidas/NMD-1.png", "adidas/NMD-2.png", "adidas/NMD-3.png"], description: "Touche urbaine et performance.", category: "adidas", quantity: 9, colors: ["#808080"]},
+    {id: 28, name: "Superstar", price: 90.30, img: "adidas/SuperStar.png", gallerie: ["adidas/SuperStar-1.png", "adidas/SuperStar-2.png", "adidas/SuperStar-3.png"], description: "Classique et intemporelle.", category: "adidas", quantity: 8, colors: ["#FFFFFF"]},
+    {id: 29, name: "Ultraboost", price: 180.49, img: "adidas/Ultraboost.png", gallerie: ["adidas/Ultraboost-1.png", "adidas/Ultraboost-2.png", "adidas/Ultraboost-3.png"], description: "Parfaite pour de longues marches.", category: "adidas", quantity: 7, color: "#0000FF" },
+    {id: 30, name: "Lite Racer", price: 85.00, img: "adidas/Lite-racer.png", gallerie: ["adidas/Lite-racer-1.png", "adidas/Lite-racer-2.png", "adidas/Lite-racer-3.png"], description: "Légère et stylée.", category: "adidas", quantity: 13, color: "#FF0000" }, 
+    {id: 31, name: "Duramo", price: 90, img: "adidas/Duramo.png", gallerie: ["adidas/Duramo-1.png", "adidas/Duramo-2.png", "adidas/Duramo-3.png"], description: "Polyvalente et confortable.", category: "adidas", quantity: 11, color: "#000080" },
+    {id: 32, name: "Samba", price: 95.75, img: "adidas/Samba.png", gallerie: ["adidas/Samba-1.png", "adidas/Samba-2.png", "adidas/Samba-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A" }, 
+    {id: 33, name: "Racer TR23", price: 80, img: "adidas/Racer.png", gallerie: ["adidas/Racer-1.png", "adidas/Racer-2.png", "adidas/Racer-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A" },
+    {id: 34, name: "Runfalcon", price: 65, img: "adidas/Runfalcon.png", gallerie: ["adidas/Runfalcon-1.png", "adidas/Runfalcon-2.png", "adidas/Runfalcon-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
+    {id: 35, name: "OZMILLEN", price: 110, img: "adidas/OZMILLEN.png", gallerie: ["adidas/OZMILLEN-1.png", "adidas/OZMILLEN-2.png", "adidas/OZMILLEN-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
+    {id: 36, name: "Kaptir", price: 90, img: "adidas/Kaptir.png", gallerie: ["adidas/Kaptir-1.png", "adidas/Kaptir-2.png", "adidas/Kaptir-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"}
+];
