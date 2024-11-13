@@ -7,8 +7,6 @@ module.exports = {
         "split-70-30": "linear-gradient(to right, #F9F1E7 70%, #FCF8F3 70%)",
       },
     },
-    plugins: [
-        require('@tailwindcss/aspect-ratio'),
-      ],
-    }
+    plugins: [],
+  }
 };

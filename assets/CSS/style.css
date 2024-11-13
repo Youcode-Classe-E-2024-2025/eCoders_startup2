@@ -906,10 +906,6 @@ video {
   z-index: 30;
 }
 
-.col-start-1 {
-  grid-column-start: 1;
-}
-
 .mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -965,10 +961,6 @@ video {
 
 .ml-auto {
   margin-left: auto;
-}
-
-.mr-1 {
-  margin-right: 0.25rem;
 }
 
 .mr-2 {
@@ -1061,10 +1053,6 @@ video {
   height: 200px;
 }
 
-.h-\[28px\] {
-  height: 28px;
-}
-
 .h-\[500px\] {
   height: 500px;
 }
@@ -1097,24 +1085,12 @@ video {
   width: 10rem;
 }
 
-.w-48 {
-  width: 12rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
 
-.w-52 {
-  width: 13rem;
-}
-
 .w-6 {
   width: 1.5rem;
-}
-
-.w-\[140px\] {
-  width: 140px;
 }
 
 .w-\[300px\] {
@@ -1186,10 +1162,6 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-\[repeat\(2\2c 1fr\)\] {
-  grid-template-columns: repeat(2,1fr);
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1204,10 +1176,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-center {
@@ -1253,10 +1221,6 @@ video {
 .gap-x-3 {
   -moz-column-gap: 0.75rem;
        column-gap: 0.75rem;
-}
-
-.gap-y-10 {
-  row-gap: 2.5rem;
 }
 
 .gap-y-5 {
@@ -1305,10 +1269,6 @@ video {
 
 .self-center {
   align-self: center;
-}
-
-.justify-self-start {
-  justify-self: start;
 }
 
 .justify-self-center {
@@ -1438,6 +1398,11 @@ video {
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
 }
 
+.bg-stone-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 37 36 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1560,6 +1525,14 @@ video {
   padding-left: 0.5rem;
 }
 
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pr-16 {
+  padding-right: 4rem;
+}
+
 .pr-4 {
   padding-right: 1rem;
 }
@@ -1588,10 +1561,6 @@ video {
 
 .text-\[10px\] {
   font-size: 10px;
-}
-
-.text-\[12px\] {
-  font-size: 12px;
 }
 
 .text-base {
@@ -1629,10 +1598,6 @@ video {
 
 .font-medium {
   font-weight: 500;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .font-semibold {
@@ -1786,6 +1751,11 @@ body {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:col-start-3 {
     grid-column-start: 3;
@@ -1909,4 +1879,5 @@ body {
     line-height: 1.75rem;
   }
 }
+
 
