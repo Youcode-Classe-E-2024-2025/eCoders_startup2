@@ -56,7 +56,7 @@ body {
 }
 @layer components {
     .product {
-        @apply w-[33%] flex-shrink-0 aspect-1 transition-transform flex justify-center items-center;
+        @apply w-[33%] flex-shrink-0 aspect-square transition-transform flex justify-center items-center;
     }
     .product .product-box {
         @apply w-[90%] h-[90%] shadow-md shadow-gray-400 relative overflow-hidden;
