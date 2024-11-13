@@ -983,6 +983,14 @@ video {
   margin-top: 2rem;
 }
 
+.mt-52 {
+  margin-top: 13rem;
+}
+
+.mt-36 {
+  margin-top: 9rem;
+}
+
 .block {
   display: block;
 }
