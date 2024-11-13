@@ -12,7 +12,12 @@ module.exports = {
               screens: {
                 'custom-1040': '1040px',
                 'max-800': { 'max': '800px' }, 
+                'max-950': { 'max': '950px' },
+                'max-450': { 'max': '550px' },
+                 
+                
               },
+              
         },
     },
     plugins: [],
