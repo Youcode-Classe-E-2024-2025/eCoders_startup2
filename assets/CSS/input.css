@@ -9,8 +9,6 @@ body {
     transform: scale(1.5);
 }
 
-
-
 @layer components {
     .cnt {
         @apply max-w-[1000px] mx-auto my-0 xl:max-w-[1200px] 2xl:max-w-[1500px];
@@ -52,7 +50,7 @@ body {
 }
 @layer components {
     .product {
-        @apply w-[33%] flex-shrink-0 aspect-1 transition-transform flex justify-center items-center;
+        @apply w-[33%] flex-shrink-0 aspect-square transition-transform flex justify-center items-center;
     }
     .product .product-box {
         @apply w-[90%] h-[90%] shadow-md shadow-gray-400 relative overflow-hidden;
@@ -91,6 +89,3 @@ body {
     }
 }
 
-.s {
-    background-color: aqua;
-}
