@@ -83,6 +83,7 @@ function initializeCarousel(carouselContainer,delay) {
         } else if (dir < 0 && translationsNum > 0) {
             translationsNum--;
         }
+        else translationsNum = translationsNum >= products.length-3 ? 0 : products.length -2;
         const offset = -translationsNum * translate;
         products.forEach(p => p.style.transform = `translateX(${offset}px)`);
     }
