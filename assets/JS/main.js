@@ -1,3 +1,5 @@
+import {products} from "../Data/data.js"
+
 //Mobile Menu--------------------------------------------
 const mobileMenu = document.querySelector('.mobile-menu');
 const mobileLinks = document.querySelector('.mobile-menu--links');
