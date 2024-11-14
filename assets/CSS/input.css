@@ -3,16 +3,26 @@
 @tailwind utilities;
 
 body {
-    font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 .menu {
-    transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+.font-raleway {
+  font-family: "Raleway", sans-serif;
 }
 
 @layer components {
-    .cnt {
-        @apply max-w-[1000px] mx-auto my-0 xl:max-w-[1200px] 2xl:max-w-[1500px];
-    }
+  .cnt {
+    @apply max-w-[1000px] mx-auto my-0 xl:max-w-[1200px] 2xl:max-w-[1500px];
+  }
 }
 @layer components {
     .landing-carrousel {
