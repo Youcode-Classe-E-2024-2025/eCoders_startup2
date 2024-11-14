@@ -46,7 +46,7 @@ function changeLandingSlide(dir) {
     landingCarrouselDots.querySelectorAll('.dot')[currLandingSlide-1].classList.add('dot-active');
 }
 
-let csId = setInterval(()=>changeLandingSlide(1),7000);
+let csId = setInterval(()=>changeLandingSlide(1),4000);
 
 landingCarrouselArrows.addEventListener('click',e=>{
     if(!e.target.matches('.arrow')) return;
@@ -68,40 +68,14 @@ landingCarrouselDots.addEventListener('click',e=>{
 //landing carrousel--------------------------------------
 
 //product carrousel--------------------------------------
-
-// const products = document.querySelectorAll('.product');
-// const productCarrousel = document.querySelector('.product-carrousel');
-// const productsArrowLeft = productCarrousel.querySelector('.arrow-left');
-// const productsArrowRight = productCarrousel.querySelector('.arrow-right');
-// const productCarrouselDots = productCarrousel.querySelector('.product-carrousel-dots');
-
-// let translationsNum = 0;
-
-// function changeProductSlide(dir) {
-//     const translate = Number.parseFloat(getComputedStyle(productCarrousel.querySelector('.slides-container')).width) * 0.335;
-//     if (dir > 0 && translationsNum < products.length - 3) {
-//         translationsNum++;
-//     } else if (dir < 0 && translationsNum > 0) {
-//         translationsNum--;
-//     }
-//     const offset = -translationsNum * translate;
-//     products.forEach(p => p.style.transform = `translateX(${offset}px)`);
-// }
-
-// window.addEventListener('resize' ,()=>changeProductSlide(0))
-
-// productsArrowLeft.addEventListener('click',()=>changeProductSlide(-1))
-// productsArrowRight.addEventListener('click',()=>changeProductSlide(1))
-
-
-function initializeCarousel(carouselContainer) {
+function initializeCarousel(carouselContainer,delay) {
     const products = carouselContainer.querySelectorAll('.product');
     const slidesContainer = carouselContainer.querySelector('.slides-container');
     const productsArrowLeft = carouselContainer.querySelector('.arrow-left');
     const productsArrowRight = carouselContainer.querySelector('.arrow-right');
     
     let translationsNum = 0;
-
+    
     function changeProductSlide(dir) {
         const translate = Number.parseFloat(getComputedStyle(slidesContainer).width) * 0.335;
         if (dir > 0 && translationsNum < products.length - 3) {
@@ -109,22 +83,37 @@ function initializeCarousel(carouselContainer) {
         } else if (dir < 0 && translationsNum > 0) {
             translationsNum--;
         }
+        else translationsNum = translationsNum >= products.length-3 ? 0 : products.length -2;
         const offset = -translationsNum * translate;
         products.forEach(p => p.style.transform = `translateX(${offset}px)`);
     }
-
+    let csId = null;
+    setTimeout(()=>{
+        csId = setInterval(()=>changeProductSlide(1),3000)
+    },delay)
+    
     // Set up event listeners for arrows
-    productsArrowLeft.addEventListener('click', () => changeProductSlide(-1));
-    productsArrowRight.addEventListener('click', () => changeProductSlide(1));
-
+    productsArrowLeft.addEventListener('click', () => {
+        changeProductSlide(-1);
+        clearInterval(csId);
+        csId = setInterval(()=>changeProductSlide(1),3000)
+});
+    productsArrowRight.addEventListener('click', () => {
+        changeProductSlide(1)
+        clearInterval(csId);
+        csId = setInterval(()=>changeProductSlide(1),3000);
+    });
+    
     // Handle window resizing to recalculate position
     window.addEventListener('resize', () => changeProductSlide(0));
 }
 
 // Initialize the first carousel
 const bestSellingCarousel = document.querySelector('#best-selling .product-carrousel');
-initializeCarousel(bestSellingCarousel);
+initializeCarousel(bestSellingCarousel,0);
 
 // Initialize the second carousel
 const newProductsCarousel = document.querySelector('#new-products .product-carrousel');
-initializeCarousel(newProductsCarousel);
+initializeCarousel(newProductsCarousel,1000);
+
+//product carrousel--------------------------------------

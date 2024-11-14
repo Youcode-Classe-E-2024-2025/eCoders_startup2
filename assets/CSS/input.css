@@ -46,16 +46,16 @@ body {
 }
 @layer components {
     .description-item {
-        @apply justify-center flex gap-5 items-center basis-[44%] md:basis-[24%];
+        @apply  flex flex-col lg:justify-center sm:justify-start sm:flex-row sm:gap-5 items-center sm:basis-[40%] lg:basis-[23%];
     }
     .description-item svg {
-        @apply min-w-6 w-6 sm:min-w-8 sm:w-8;
+        @apply min-w-8 w-8;
     }
     .description-item h3 {
-        @apply font-semibold text-[10px] sm:text-sm
+        @apply font-semibold text-sm md:text-base lg:text-sm text-center sm:text-start text-nowrap;
     }
     .description-item p {
-        @apply text-gray-500 text-[10px] sm:text-xs text-nowrap
+        @apply text-gray-500 text-sm md:text-base lg:text-sm text-center sm:text-start text-nowrap;
     }
 }
 @layer components {
@@ -66,10 +66,10 @@ body {
         @apply w-[90%] h-[90%] shadow-md shadow-gray-400 relative overflow-hidden;
     }
     .product img {
-        @apply translate-y-[-15%];
+        @apply translate-y-[-20%];
     }
     .product .product-text {
-        @apply text-[10px] md:text-sm lg:text-base w-full bg-white h-[30%] absolute left-0 bottom-0 z-10 px-2 sm:px-4 py-[.5px] sm:py-1 xl:py-3 flex flex-col justify-between items-center sm:items-start
+        @apply text-[10px] md:text-sm lg:text-base w-full bg-white h-[32%] absolute left-0 bottom-0 z-10 px-2 sm:px-4 py-[.5px] sm:py-1 xl:py-3 flex flex-col justify-between items-center sm:items-start
     }
     .product .product-text h3, .product .product-text span {
         @apply font-semibold;
