@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import {products} from "../Data/data.js"
+>>>>>>> origin/landingPage
 
 //Mobile Menu--------------------------------------------
 const mobileMenu = document.querySelector('.mobile-menu');
