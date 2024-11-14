@@ -1,4 +1,4 @@
-import {products} from "../Data/data.js"
+import {productsData} from "../Data/data.js"
 
 //Mobile Menu--------------------------------------------
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -70,6 +70,16 @@ landingCarrouselDots.addEventListener('click',e=>{
 //landing carrousel--------------------------------------
 
 //product carrousel--------------------------------------
+//getting 9 most rated products
+const bestSelling = productsData.sort((a,b)=>b.rating-a.rating).slice(0,9);
+//getting 9 newest products
+const newestProducts = productsData.sort((a,b)=>new Date(b.dateOfAdd)-new Date(a.dateOfAdd)).slice(0,9);
+
+
+const productsImages = document.querySelectorAll('#best-selling img');
+
+bestSelling.forEach((p,i)=>productsImages[i].src = `assets/Data/${p.img}`)
+
 function initializeCarousel(carouselContainer,delay) {
     const products = carouselContainer.querySelectorAll('.product');
     const slidesContainer = carouselContainer.querySelector('.slides-container');
@@ -119,3 +129,4 @@ const newProductsCarousel = document.querySelector('#new-products .product-carro
 initializeCarousel(newProductsCarousel,1000);
 
 //product carrousel--------------------------------------
+

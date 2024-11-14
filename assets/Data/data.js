@@ -1,4 +1,4 @@
-export const products = [
+export const productsData = [
     // New Balance
     {id: 1, name: "990v5", price: 166.43, img: "NB1.webp", gallerie: ["NB11.webp", "NB12.webp", "NB13.webp"], description: "Luxury sport shoe", category: "New Balance", quantity: 10, colors: ["#00443F", "#B9975E", "#3C6E72", "#E5E4DB"], details: "Crafted for both style and performance, the New Balance 990v5 is a premium choice featuring plush cushioning, superior stability, and a luxurious design. Ideal for all-day wear with exceptional comfort.", rating: 0.89, dateOfAdd: "2023-07-15"},
     {id: 2, name: "Foam 1080v12", price: 189.99, img: "NB2.webp", gallerie: ["NB21.webp", "NB22.webp", "NB23.webp"], description: "Comfortable running shoe", category: "New Balance", quantity: 5, colors: ["#111315"], details: "Designed for long-distance runners, the 1080v12 provides excellent cushioning and support, featuring a sleek and lightweight design perfect for enhancing speed and comfort over long runs.", rating: 0.92, dateOfAdd: "2023-06-20"},
