@@ -1,3 +1,5 @@
+// java script du FAQ
+
 const faqs = document.querySelectorAll(".faq");
 
 faqs.forEach((faq) => {
