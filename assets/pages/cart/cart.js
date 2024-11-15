@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
     const count = document.querySelector(".count");
     const subtotalEl = document.querySelector(".subtotal");
@@ -202,6 +203,7 @@ function generatePDF() {
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".download-btn").addEventListener("click", generatePDF);
 });
+
 
 
 
