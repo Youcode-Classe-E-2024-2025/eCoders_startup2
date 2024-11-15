@@ -5,7 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkoutPrice = document.querySelector(".checkout-btn span");
     const shipping = 4;
 
-    
+    // Get the current URL
+const url = new URL(window.location.search);
+
+// Use URLSearchParams to extract the 'ID' parameter
+const id = url.searchParams.get("ID");
+
+console.log(id); // Output should be '30'
+
 
     function updateCount() {
         const countItems = document.querySelectorAll(".cart-item").length;
@@ -195,3 +202,14 @@ function generatePDF() {
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".download-btn").addEventListener("click", generatePDF);
 });
+
+
+
+
+// Get the current URL
+const url = new URL(window.location.href);
+
+// Use URLSearchParams to extract the 'ID' parameter
+const id = url.searchParams.get("ID");
+
+console.log(id); // Output should be '30'
