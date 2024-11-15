@@ -2,7 +2,19 @@ import { products } from "../../Data/data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   const total = document.querySelector("#totalProduct");
+  const totalPrices = document.querySelector("#totalPrices");
+  const totalQuantity = document.querySelector("#totalQuantity");
   total.innerHTML = `${products.length}`;
+  const sumPrices = products.reduce(
+    (accumulator, product) => accumulator + product.price,
+    0
+  );
+  totalPrices.innerHTML = `$${sumPrices.toFixed(2)}`;
+  const sumQuantity = products.reduce(
+    (accumulator, product) => accumulator + product.quantity,
+    0
+  );
+  totalQuantity.innerHTML = `${sumQuantity}`;
 });
 
 const productTableBody = document.querySelector("#productTableBody tbody");
