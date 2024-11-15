@@ -1,4 +1,7 @@
-export const productsData = [
+const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+console.log(storedProducts);
+ 
+ let productsData = [
     // New Balance
     {id: 1, name: "990v5", price: 166.43, img: "NB1.webp", gallerie: ["NB11.webp", "NB12.webp", "NB13.webp"], description: "Luxury sport shoe", category: "New Balance", quantity: 10, colors: ["#00443F", "#B9975E", "#3C6E72", "#E5E4DB"], details: "Crafted for both style and performance, the New Balance 990v5 is a premium choice featuring plush cushioning, superior stability, and a luxurious design. Ideal for all-day wear with exceptional comfort.", rating: 0.89, dateOfAdd: "2023-07-15"},
     {id: 2, name: "Foam 1080v12", price: 189.99, img: "NB2.webp", gallerie: ["NB21.webp", "NB22.webp", "NB23.webp"], description: "Comfortable running shoe", category: "New Balance", quantity: 5, colors: ["#111315"], details: "Designed for long-distance runners, the 1080v12 provides excellent cushioning and support, featuring a sleek and lightweight design perfect for enhancing speed and comfort over long runs.", rating: 0.92, dateOfAdd: "2023-06-20"},
@@ -40,3 +43,6 @@ export const productsData = [
     {id: 35, name: "OZMILLEN", price: 110, img: "OZMILLEN.png", gallerie: ["OZMILLEN-1.png", "OZMILLEN-2.png", "OZMILLEN-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, colors: ["#A52A2A"], details: "L'OZMILLEN est une chaussure au design moderne et élégant, offrant à la fois confort et style. Elle est idéale pour une utilisation en ville ou pour une activité sportive légère.", rating: 0.84, dateOfAdd: "2023-06-30"},
     {id: 36, name: "Kaptir", price: 90, img: "Kaptir.png", gallerie: ["Kaptir-1.png", "Kaptir-2.png", "Kaptir-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, colors: ["#A52A2A"], details: "Le Kaptir combine confort et légèreté, avec un design qui s'adapte à toutes les occasions. Parfait pour ceux qui recherchent une chaussure agréable au quotidien.", rating: 0.80, dateOfAdd: "2023-04-12"}
 ];
+
+
+localStorage.setItem('products', JSON.stringify(products));

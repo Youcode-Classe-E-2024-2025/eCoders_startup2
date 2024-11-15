@@ -1,8 +1,8 @@
-import { productsData } from '../../Data/data.js';
+// import { productsData } from '../../Data/data.js';
 
 
 
-let products = productsData;
+let products = JSON.parse(localStorage.getItem('products'));
 console.log(products);
 
 
