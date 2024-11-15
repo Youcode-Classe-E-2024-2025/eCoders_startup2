@@ -38,7 +38,7 @@
         </div>
     </nav>
   </header>
-    <main class="flex justify-items-center flex-col">
+    <main class="flex justify-items-center flex-col relative">
       <h1 class="p-4 flex justify-center font-bold text-xl">
         #Product Details
       </h1>
@@ -50,7 +50,7 @@
             <div class="flex flex-col space-y-4">
               <img
                 id="imgOff"
-                src="../../Data/newBalance/Fresh_Foam.png"
+                src=""
                 alt="Product Image"
                 class="w-[363px] rounded border border-gray-300 shadow-md cursor-pointer"
               />
@@ -61,21 +61,21 @@
                 <img
                   onclick="makeItOff()"
                   id="imgSec1"
-                  src="../../Data/newBalance/Fresh_Foam_1.png"
+                  src=""
                   alt="Additional Product Image 3"
                   class="rounded cursor-pointer border border-gray-300 shadow-md hover:opacity-50"
                 />
                 <img
                   onclick="makeItOff()"
                   id="imgSec2"
-                  src="../../Data/newBalance/Fresh_Foam_2.png"
+                  src=""
                   alt="Additional Product Image 3"
                   class="rounded cursor-pointer border border-gray-300 shadow-md hover:opacity-50"
                 />
                 <img
                   onclick="makeItOff()"
                   id="imgSec3"
-                  src="../../Data/newBalance/Fresh_Foam_3.png"
+                  src=""
                   alt="Additional Product Image 3"
                   class="rounded cursor-pointer border border-gray-300 shadow-md hover:opacity-50"
                 />
@@ -92,7 +92,7 @@
               <p class="font-medium text-gray-700">Color :</p>
               <div
                 id="textColor"
-                class="w-7 h-7 bg-colgre border rounded-sm border-gray-300 shadow-md cursor-pointer hover:bg-teal-600"
+                class="flex gap-1"
               ></div>
 
               <div class="flex flex-wrap gap-2 mt-2">
@@ -152,7 +152,7 @@
           </div>
 
           <div class="flex space-x-4">
-            <button
+            <button id="add-to-cart" data-id="${productObject.id}"
               class="w-full bg-purple-200 text-purple-600 font-semibold py-2 rounded hover:bg-purple-300"
             >
               Add To Cart
@@ -160,8 +160,8 @@
           </div>
 
           <div>
-            <h3 class="font-semibold text-gray-800">Description</h3>
-            <p class="text-gray-600 mt-2">
+            <h3 class="font-semibold text-gray-800">Details</h3>
+            <p id="textDetails" class="text-gray-600 mt-2">
               Add a contemporary design and a pop of color to a cozy seating
               area or your living room with this chaise-inspired loveseat. We
               love all the mid-century details from the low-profile back and
@@ -169,6 +169,10 @@
             </p>
           </div>
         </div>
+      </div>
+      <div class="overflow-hidden hidden overlay absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]  h-[50%] bg-slate-600 rounded-lg">
+        <button class="absolute top-0 right-0 bg-red-500 text-xl p-1">&times;</button>
+        <img src="" class="h-full" alt="">
       </div>
     </main>
     <footer class="mt-12 px-10">
@@ -223,6 +227,7 @@
       </div>
   </footer>
     <script src="../../JS/mobile-menu.js"></script>
-    <script src="details.js"></script>
+    <script src="details.js" type="module"></script>
+    <script src="../../Data/data.js" type="module"></script>
   </body>
 </html>

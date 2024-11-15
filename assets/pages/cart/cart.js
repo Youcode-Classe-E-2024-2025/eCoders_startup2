@@ -1,15 +1,23 @@
-import {products} from '../../Data/data.js'
+import {productsData} from '../../Data/data.js'
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     function deleteItem(ev) {
         const el = ev.target.closest(".cart-item");
+        if (!el) return;
+
         const productId = el.getAttribute("data-id"); 
+
+        const indx = cart.findIndex(item => item.id === productId);
+        if (indx !== -1) {
+            cart.splice(indx, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+        }
     
         el.remove();
     
-        cart = cart.filter(item => item.id !== productId);
-        localStorage.setItem("cart", JSON.stringify(cart));
+        // cart = cart.filter(item => item.id !== productId);
+        // localStorage.setItem("cart", JSON.stringify(cart));
     
         updateCount();
         updatePrice();
@@ -19,39 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".delete-btn").forEach(btn => {
         btn.addEventListener("click", deleteItem);
     });
-    
-    
-// function removeFromCart(productId) {
-    
-//     cart = cart.filter(item => item.id !== productId);
-//     localStorage.setItem("cart", JSON.stringify(cart));
-//     displayCart();
-// }
-
-    // document.querySelectorAll(".quantity").forEach(input => {
-    //     input.addEventListener("input", updatePrice)
-    // });
-
-    // updateCount();
-    // updatePrice();
 
     document.querySelector(".checkout-btn").addEventListener("click", function (event) {
         event.preventDefault();
     
         if (validateForm()) {
-            // emptyErrors();
             if (confirm("Payment information is valid. Proceeding to payment...")) {
                 document.querySelector(".download-btn").style.display = "block";
             }
         }
     });
-
-    // function emptyErrors() {
-    //     errorName.textContent = "";
-    //     errorCard.textContent = "";
-    //     errorExpiry.textContent = "";
-    //     errorCvv.textContent = "";
-    // }
 
     function validateForm() {
         const name = document.getElementById("name").value.trim();
@@ -188,7 +173,7 @@ function updatePrice() {
         const quantityEl = el.querySelector(".quantity");
         const itemPriceEl = el.querySelector(".item-price");
         
-        if (quantityEl && itemPriceEl && el.dataset.price) {
+        if (quantityEl && itemPriceEl) {
             const itemUnitPrice = parseFloat(el.dataset.price);
             const quantity = parseInt(quantityEl.value) || 1; 
             
@@ -213,16 +198,12 @@ document.querySelector(".products").addEventListener("input", event => {
 });
 
 
-
-
-
 const count = document.querySelector(".count");
 
 function updateCount() {
     const countItems = document.querySelectorAll(".cart-item").length;
-    console.log(countItems);
     
-    count.innerHTML = `${countItems}`;
+    count.innerHTML = `You have ${countItems} items in your cart`;
 }
 
 document.querySelectorAll(".quantity").forEach(input => {
@@ -245,14 +226,14 @@ function displayCart() {
                             <img class="object-cover w-16 h-16 rounded-lg mr-3.5" src="../../images/${product.img}" alt="${product.name}" />
 
                             <div class="item-details self-center flex flex-col flex-wrap w-[160px]">
-                                <h4 class="item-name mb-2 font-semibold text-xl pt-3">${product.name}</h4>
-                                <p class="font-semibold text-xl">${product.description}</p>
+                                <h4 class="item-name mb-2 font-semibold text-base pt-3">${product.name}</h4>
+                                <p class="font-semibold text-base">${product.description}</p>
                             </div>
                         </div>
                         <div class="">
                             <input type="number" value="1" min="1" class="quantity font-raleway w-10 text-center font-semibold text-xl"/>
                         </div>
-                        <p class="item-price ml-3 font-semibold text-xl">$${product.price}</p>
+                        <p class="item-price ml-3 font-semibold text-base">$${product.price}</p>
                         <button class="delete-btn mr-2 cursor-pointer text-xl text-[#888]">
                             <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
                             <svg enable-background="new 0 0 512 512" height="24" width="24" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -267,17 +248,34 @@ function displayCart() {
                     </div>
 `;
         productsContainer.appendChild(productEL);
-        console.log(productEL);
-        // updateCount();
+        updateCount();
         
       });
+
+    //   document.querySelector(".delete-btn").forEach(btn => {
+    //     btn.addEventListener("click", deleteItem)
+    //   })
     } else {
       productsContainer.innerHTML = '<p>Le panier est vide.</p>';
     }
     updateCount();
+    // updatePrice();
   }
   
 
-
-
 window.onload = displayCart;
+
+// function updateCart(product) {
+//     const existingProduct = cart.find(item => item.id === product.id);
+//     if (existingProduct) {
+//         // Update the quantity of the existing item
+//         existingProduct.quantity += product.quantity;
+//     } else {
+//         // Add new item to cart
+//         cart.push(product);
+//     }
+//     localStorage.setItem("cart", JSON.stringify(cart));
+// }
+
+
+const url = new URLSearchParams(location.search)
