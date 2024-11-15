@@ -107,3 +107,10 @@ body {
 }
 
 
+.chosen-size {
+    @apply bg-slate-300 scale-105;
+}
+.chosen-color {
+    @apply scale-105;
+    border: solid 2px cyan;
+}

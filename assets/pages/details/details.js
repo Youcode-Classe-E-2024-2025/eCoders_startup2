@@ -78,8 +78,8 @@ const addedProduct={...productObject,color:"",size:0,quantity : 1};
 textColor.addEventListener('click',e=>{
   if(!e.target.matches('.color')) return;
     addedProduct.color = getComputedStyle(e.target).backgroundColor;
-    colorElements.forEach(ce=>ce.classList.remove('border','border-cyan-400'))
-    e.target.classList.add('border','border-cyan-400')
+    colorElements.forEach(ce=>ce.classList.remove('chosen-color'))
+    e.target.classList.add('chosen-color')
     console.log(addedProduct.color);   
 })
 
@@ -88,9 +88,9 @@ sizeElementsContainer.addEventListener('click',e=>{
   addedProduct.size = +e.target.dataset.size;
   sizeElementsContainer.querySelectorAll('.size')
   .forEach(s=>{
-    s.classList.remove('bg-slate-200');
+    s.classList.remove('chosen-size');
   })
-  e.target.classList.add('bg-slate-200');
+  e.target.classList.add('chosen-size');
 })
 
 
@@ -107,7 +107,7 @@ btnAddToCart.addEventListener('click',()=>{
     cart.push(addedProduct);
   }else exist.quantity+=1;
   localStorage.setItem('cart',JSON.stringify(cart));
-  location.href = "../../cart/cart.html";
+  location.href = "http://127.0.0.1:5500/assets/pages/cart/cart.html";
 })
 console.log(cart);
 
