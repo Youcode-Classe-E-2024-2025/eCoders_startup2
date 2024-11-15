@@ -137,7 +137,8 @@
 <section class="productDisplay h-fit w-full flex flex-wrap justify-between gap-2 max-450:justify-around" id="productDisplay">
     
 
-    
+       <!-- pagination  -->
+
 
     
 </section>
@@ -150,12 +151,13 @@
 
              
 
+        <div class="buttonsNextAndPrevious">
+
+        <button type="button" class="bg-[#ffffff] border border-[#E89F71] text-[#E89F71] w-fit h-fit  py-1 px-6 text-center " style="margin-left:40% ;"  id="previeus" >previeus Products</button>
 
 
-
-
-         <button type="button" class="bg-[#ffffff] border border-[#E89F71] text-[#E89F71] w-fit h-fit  py-1 px-6 text-center " style="margin-left:40% ;"  >NEXT Products</button>
-
+        <button type="button" class="bg-[#ffffff] border border-[#E89F71] text-[#E89F71] w-fit h-fit  py-1 px-6 text-center " style="margin-left:40% ;"  id="next" >NEXT Products</button>
+        </div>
 
         </main>
 
@@ -216,6 +218,34 @@
                 </div>
             </div>
         </footer>
+        <!-- <script>
+            let counter=1;
+function pagineTEST(y){
+    console.log('test' , y);
+    
+       
+    if (y=='-') {
+     
+    counter--;
+        
+    } else {
+         counter++;
+    }
+
+    if (Math.ceil(products.length/12)< counter || counter < 1) {
+        return;
+    }
+
+      
+
+    const startIndex = (currentPage - 1) * 12;
+    const endIndex = startIndex + 12;
+    const paginatedProducts = productsP.slice(startIndex, endIndex);
+    displayAll(paginatedProducts);
+
+    
+}
+        </script> -->
         <script   src="../../JS/main.js"></script>
         <script type="module"  src="../../Data/data.js"></script>
         <script type="module"  src="products.js"></script>

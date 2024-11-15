@@ -39,5 +39,12 @@ export const products = [
     {id: 33, name: "Racer TR23", price: 80, img: "Racer.png", gallerie: ["Racer-1.png", "Racer-2.png", "Racer-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A" },
     {id: 34, name: "Runfalcon", price: 65, img: "Runfalcon.png", gallerie: ["Runfalcon-1.png", "Runfalcon-2.png", "Runfalcon-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
     {id: 35, name: "OZMILLEN", price: 110, img: "OZMILLEN.png", gallerie: ["OZMILLEN-1.png", "OZMILLEN-2.png", "OZMILLEN-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
+    {id: 36, name: "Kaptir", price: 90, img: "Kaptir.png", gallerie: ["Kaptir-1.png", "Kaptir-2.png", "Kaptir-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
+    {id: 34, name: "Runfalcon", price: 65, img: "Runfalcon.png", gallerie: ["Runfalcon-1.png", "Runfalcon-2.png", "Runfalcon-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
+    {id: 35, name: "OZMILLEN", price: 110, img: "OZMILLEN.png", gallerie: ["OZMILLEN-1.png", "OZMILLEN-2.png", "OZMILLEN-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
     {id: 36, name: "Kaptir", price: 90, img: "Kaptir.png", gallerie: ["Kaptir-1.png", "Kaptir-2.png", "Kaptir-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"}
+    
+
+
+
 ];

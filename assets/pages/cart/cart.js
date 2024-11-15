@@ -205,11 +205,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-// Get the current URL
-const url = new URL(window.location.href);
-
-// Use URLSearchParams to extract the 'ID' parameter
-const id = url.searchParams.get("ID");
-
-console.log(id); // Output should be '30'
