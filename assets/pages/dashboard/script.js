@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const total = document.querySelector("#totalProduct");
   const totalPrices = document.querySelector("#totalPrices");
   const totalQuantity = document.querySelector("#totalQuantity");
+  const stockEpuise = document.querySelector("#stockEpuise");
   total.innerHTML = `${products.length}`;
   const sumPrices = products.reduce(
     (accumulator, product) => accumulator + product.price,
@@ -15,6 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
     0
   );
   totalQuantity.innerHTML = `${sumQuantity}`;
+
+  const outOfStockProducts = products.filter(
+    (product) => product.quantity === 0
+  );
+  const outOfStockCount = outOfStockProducts.length;
+  stockEpuise.innerHTML = `${outOfStockCount}`;
 });
 
 const productTableBody = document.querySelector("#productTableBody tbody");
