@@ -1434,6 +1434,11 @@ body {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:col-start-3 {
     grid-column-start: 3;
