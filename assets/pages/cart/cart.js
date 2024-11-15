@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".download-btn").addEventListener("click", generatePDF);
 });
 //------------------------------------------------------------------
-const url = new URLSearchParams(location.search)
+
 
 
 

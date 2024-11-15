@@ -59,21 +59,21 @@
                 class="flex w-[50px] lg:w-16 md:w-16 border-gray-400 gap-x-4 lg:gap-x-4 md:gap-x-4"
               >
                 <img
-                  onclick="makeItOff()"
+                
                   id="imgSec1"
                   src=""
                   alt="Additional Product Image 3"
                   class="rounded cursor-pointer border border-gray-300 shadow-md hover:opacity-50"
                 />
                 <img
-                  onclick="makeItOff()"
+                
                   id="imgSec2"
                   src=""
                   alt="Additional Product Image 3"
                   class="rounded cursor-pointer border border-gray-300 shadow-md hover:opacity-50"
                 />
                 <img
-                  onclick="makeItOff()"
+              
                   id="imgSec3"
                   src=""
                   alt="Additional Product Image 3"
@@ -95,52 +95,42 @@
                 class="flex gap-1"
               ></div>
 
-              <div class="flex flex-wrap gap-2 mt-2">
+              <div class="sizes flex flex-wrap gap-2 mt-2">
                 <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
+                  class="size w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
+                data-size="38">
                   38
                 </div>
                 <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
+                  class="size w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
+                data-size="39">
                   39
                 </div>
                 <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
+                  class="size w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
+                data-size="40">
                   40
                 </div>
                 <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
+                  class="size w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
+                data-size="41">
                   41
                 </div>
                 <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
+                  class="size w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
+                data-size="42">
                   42
                 </div>
                 <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
+                  class="size w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
+                data-size="43">
                   43
                 </div>
                 <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
+                  class="size w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
+                data-size="44">
                   44
-                </div>
-                <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
-                  45
-                </div>
-                <div
-                  class="w-7 h-7 border rounded-sm bg-white border-gray-300 shadow-sm text-center cursor-pointer hover:bg-gray-300"
-                >
-                  46
-                </div>
+                </div>              
               </div>
               <div
                 id="textDesc"
@@ -150,10 +140,9 @@
               </div>
             </div>
           </div>
-
           <div class="flex space-x-4">
             <button
-              class="w-full bg-purple-200 text-purple-600 font-semibold py-2 rounded hover:bg-purple-300"
+              class="btn-addtocart w-full bg-purple-200 text-purple-600 font-semibold py-2 rounded hover:bg-purple-300"
             >
               Add To Cart
             </button>
@@ -170,7 +159,7 @@
           </div>
         </div>
       </div>
-      <div class="overflow-hidden hidden overlay absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]  h-[50%] bg-slate-600 rounded-lg">
+      <div class="overflow-hidden shadow-md shadow-stone-700 hidden overlay absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]  h-[50%] bg-slate-600 rounded-lg">
         <button class="absolute top-0 right-0 bg-red-500 text-xl p-1">&times;</button>
         <img src="" class="h-full" alt="">
       </div>
