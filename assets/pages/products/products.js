@@ -1,6 +1,10 @@
 import { productsData } from '../../Data/data.js';
 
-console.log(productsData);
+
+
+let products = productsData;
+console.log(products);
+
 
 // Display a single product card
 function cardDisplay(product) {
@@ -22,11 +26,8 @@ function cardDisplay(product) {
             </div>
             <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
             <div class="cardButtons absolute inset-0 flex pt-7 flex-col justify-center gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <a href="../cart/cart.html?ID=${product.id}" class="w-full flex justify-center mb-3">
+                <a href="../details/details.html?Id=${product.id}" class="w-full flex justify-center mb-3">
                     <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
-                </a>
-                <a href="../details/details.html?Id=${product.id}" class="w-full flex justify-center">
-                    <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 border font-medium" aria-label="See Details">See Details</button>
                 </a>
             </div>
         </div>
@@ -83,19 +84,166 @@ SortByOrder.addEventListener("change", function() {
    
 });
 
+// let counter=1;
+// function pagine(y){
+//     console.log('test' , y);
+    
+       
+//     if (y=='-') {
+     
+//     counter--;
+        
+//     } else {
+//          counter++;
+//     }
+
+//     if (Math.ceil(products.length/12)< counter || counter < 1) {
+//         return;
+//     }
+
+      
+
+//     const start = (currentPage - 1) * 12;
+//     const end = start + 12;
+//     const paginatedProducts = productsP.slice(start, end);
+//     displayAll(paginatedProducts);
+
+    
+// }
+let next=document.getElementById('next');
+let pre=document.getElementById('previous');
+
+let counter=0;
+// function pagineTEST(y){
+//     console.log('test' , y);
+    
+       
+//     if (y=='-') {
+     
+//     counter--;
+        
+//     } else {
+//          counter++;
+//     }
+
+//     if (Math.ceil(products.length/12)< counter || counter < 1) {
+//         return;
+//     }
+
+      
+
+//     const start = (currentPage - 1) * 12;
+//     const end = start + 12;
+//     const paginatedProducts = productsP.slice(start, end);
+//     displayAll(paginatedProducts);
+
+    
+// }
 
 
+
+next.addEventListener('click'  , ()=>{
+     
+    console.log('test' , counter);
+    // console.log('test  rest pro' ,products.length/12 -1);
+    // console.log('test  rest c' ,Math.ceil(products.length/12)-1 );
+
+    // console.log('test  rest f' ,Math.floor(products.length/12) -1);
+   
+    // console.log(Math.ceil(products.length/12)-1 > counter ,' MM ',  Math.floor(products.length/12)-1 < counter  );
+    
+    console.log(' module' ,( products.length%12)!==0);
+    // console.log(' module' ,Math.floor(products.length/12) );
+    console.log(' module' ,Math.floor(products.length/12)-1 == counter );
+    
+     if (Math.floor(products.length/12)-1 == counter && (products.length%12)!==0) {
+         console.log('test  rest pro' ,products.length%12);
+        displayAll(products.slice(-(products.length%12)));
+        counter++;
+        return;
+
+
+    }
+    
+     counter++;
+    if (Math.ceil(products.length/12)-1 < counter) {
+        
+        counter--;
+       
+    }
+   
+        
+    
+// Math.ceil(products.length/12
+    
+
+    // if (Math.ceil(products.length/12)> counter && Math.floor(products.length/12)> counter) {
+        
+    // }
+
+   
+
+    const start = (counter ) * 12;
+    const end = start + 12;
+    console.log(start , ' test',end);
+    
+    const paginatedProducts = products.slice(start, end);
+    displayAll(paginatedProducts);
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Adds a smooth scrolling effect
+    });
+
+    
+   
+
+})
+
+pre.addEventListener('click'  , ()=>{
+    console.log('test' , counter);
+    
+     if ( counter <=0) {
+        return;
+    }  
+   
+         counter--;
+    
+// Math.ceil(products.length/12
+    
+
+    // if (Math.ceil(products.length/12)> counter && ) {
+        
+    // }
+
+    console.log('test' , counter);
+
+    const start = (counter ) * 12;
+    const end = start + 12;
+    console.log(start , ' test',end);
+    
+    const paginatedProducts = products.slice(start, end);
+    displayAll(paginatedProducts);
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Adds a smooth scrolling effect
+    });
+   
+
+})
 
 
 
 
 // display products depend on given list
 
-function displayAll(productsP) {
+function displayAll(products ) {
     document.getElementById('productDisplay').innerHTML='';
+
+
     
 
-    productsP.forEach(element => {
+    products.forEach(element => {
         cardDisplay(element);
         
     });
@@ -133,4 +281,4 @@ function displayAll(productsP) {
 
 
 
-displayAll(productsData);
+displayAll(products.slice(0,12));

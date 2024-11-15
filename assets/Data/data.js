@@ -40,5 +40,3 @@ export const productsData = [
     {id: 35, name: "OZMILLEN", price: 110, img: "OZMILLEN.png", gallerie: ["OZMILLEN-1.png", "OZMILLEN-2.png", "OZMILLEN-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, colors: ["#A52A2A"], details: "L'OZMILLEN est une chaussure au design moderne et élégant, offrant à la fois confort et style. Elle est idéale pour une utilisation en ville ou pour une activité sportive légère.", rating: 0.84, dateOfAdd: "2023-06-30"},
     {id: 36, name: "Kaptir", price: 90, img: "Kaptir.png", gallerie: ["Kaptir-1.png", "Kaptir-2.png", "Kaptir-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, colors: ["#A52A2A"], details: "Le Kaptir combine confort et légèreté, avec un design qui s'adapte à toutes les occasions. Parfait pour ceux qui recherchent une chaussure agréable au quotidien.", rating: 0.80, dateOfAdd: "2023-04-12"}
 ];
-
-
