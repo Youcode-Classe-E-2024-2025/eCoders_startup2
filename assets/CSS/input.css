@@ -73,13 +73,16 @@ body {
         @apply translate-y-[-20%];
     }
     .product .product-text {
-        @apply text-[10px] md:text-sm lg:text-base w-full bg-white h-[32%] absolute left-0 bottom-0 z-10 px-2 sm:px-4 py-[.5px] sm:py-1 xl:py-3 flex flex-col justify-between items-center sm:items-start
+        @apply  text-[10px] md:text-sm lg:text-base w-full bg-white h-fit absolute left-0 bottom-0 z-10 px-2 sm:px-4 py-[.5px] sm:py-1 xl:py-3 flex flex-col justify-between items-center sm:items-start
     }
     .product .product-text h3, .product .product-text span {
         @apply font-semibold;
     }
     .product .product-text p {
-        @apply text-[10px] md:text-xs hidden sm:block;
+        @apply text-[10px] text-center sm:text-start md:text-xs bg-slate-300 pl-1 hidden;
+    }
+    .product:hover p {
+        @apply block;
     }
 }
 

@@ -60,12 +60,23 @@ const bestSelling = productsData.sort((a,b)=>b.rating-a.rating).slice(0,9);
 //getting 9 newest products
 const newestProducts = productsData.sort((a,b)=>new Date(b.dateOfAdd)-new Date(a.dateOfAdd)).slice(0,9);
 
-
+const productsElements = document.querySelectorAll('.product-box');
 const bestProductsImages = document.querySelectorAll('#best-selling img');
 const newProductsImages = document.querySelectorAll('#new-products img');
 
 bestSelling.forEach((p,i)=>bestProductsImages[i].src = `assets/images/${p.img}`);
 newestProducts.forEach((p,i)=>newProductsImages[i].src = `assets/images/${p.img}`);
+
+
+const productsObjects = [...bestSelling,...newestProducts];
+productsElements.forEach((pe,i)=>{
+    pe.querySelector('h3').textContent = productsObjects[i].name;
+    pe.querySelector('p').textContent = productsObjects[i].description;
+    pe.querySelector('span').textContent = '$'+productsObjects[i].price;
+    pe.addEventListener('click',()=>{
+        location.href = `http://127.0.0.1:5500/assets/pages/details/details.html?id=${productsObjects[i].id}`;
+    })
+})
 
 function initializeCarousel(carouselContainer,delay) {
     const products = carouselContainer.querySelectorAll('.product');
@@ -123,3 +134,11 @@ initializeCarousel(newProductsCarousel,1000);
 
 //product carrousel--------------------------------------
 
+//routing------------------------------------------------
+// const productsElements = document.querySelectorAll('.product-box');
+
+// productsElements.forEach(pe=>{
+//     pe.addEventListener('click',e=>{
+        
+//     })
+// })
