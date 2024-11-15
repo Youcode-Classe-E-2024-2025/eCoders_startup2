@@ -67,7 +67,7 @@ body {
         @apply w-[33%] flex-shrink-0 aspect-square transition-transform flex justify-center items-center;
     }
     .product .product-box {
-        @apply w-[90%] h-[90%] shadow-md shadow-gray-400 relative overflow-hidden;
+        @apply w-[90%] h-[90%] shadow-md shadow-gray-400 relative overflow-hidden hover:scale-90  hover:shadow-green-500 transition-transform cursor-pointer;
     }
     .product img {
         @apply translate-y-[-20%];
