@@ -11,6 +11,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Itim&family=Rubik+Wet+Paint&display=swap");
+    </style>
+
     <link rel="stylesheet" href="../../CSS/style.css" />
   </head>
   <body>
@@ -134,7 +138,7 @@
             <div class="faq bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5">
               <div class="flex question m-3 justify-between">
                 <h3 class="text-xl font-bold">
-                  Comment choisir la bonne taille pour mes vêtements de sport ?
+                  Comment choisir la bonne taille pour mes chaussures de sport ?
                 </h3>
                 <i class="fa-regular fa-circle-up"></i>
               </div>
@@ -148,12 +152,12 @@
             <div class="faq bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5">
               <div class="flex question m-3 justify-between">
                 <h3 class="text-xl font-bold">
-                  Les vêtements sont-ils adaptés à tous les types de sports ?
+                  Les chaussures sont-ils adaptés à tous les types de sports ?
                 </h3>
                 <i class="fa-regular fa-circle-up"></i>
               </div>
               <p class="reponse hidden text-[1.06rem] leading-6 font-medium">
-                Oui, nous proposons des vêtements conçus pour une variété de
+                Oui, nous proposons des chaussures conçus pour une variété de
                 sports, y compris le running, le yoga, la musculation, le
                 cyclisme, et plus encore. Chaque produit est spécifiquement
                 conçu pour répondre aux exigences de la discipline pour laquelle
@@ -236,11 +240,16 @@
             <label for="message" class="text-center text-xl font-bold mb-3.5"
               >Message :</label
             >
-            <input
+            <textarea
               type="message"
-              class="mb-3.5 p-2 rounded-xl border-2 border-solid border-black border-opacity-40"
+              class="mb-3.5 p-2 border-2 border-solid border-black border-opacity-40 rounded-xl"
               placeholder="Enter your message..."
-            />
+            ></textarea>
+            <button
+              class="bg-[#69306D] text-white w-fit mx-auto px-2 py-1 rounded-xl font-['IBM Plex Mono', monospace]"
+            >
+              Submit
+            </button>
           </div>
         </form>
       </section>
