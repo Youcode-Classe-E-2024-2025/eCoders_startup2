@@ -46,7 +46,7 @@ let SortByOrder=document.getElementById("SortByOrder");
 
 
 filterByCategorie.addEventListener("change", function() {
-    let liste=products;
+    let liste=productsData;
     const selectedCategory = this.value;
    liste=liste.filter(item => item.category==selectedCategory);
 
@@ -56,7 +56,7 @@ filterByCategorie.addEventListener("change", function() {
 });
 
 SortByOrder.addEventListener("change", function() {
-    let liste=products;
+    let liste=productsData;
     const selectedCategory = this.value;
     console.log(selectedCategory);
     
