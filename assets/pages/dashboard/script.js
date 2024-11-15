@@ -1,16 +1,23 @@
 import { products } from "../../Data/data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
+  updateStatistics();
+});
+
+function updateStatistics() {
   const total = document.querySelector("#totalProduct");
   const totalPrices = document.querySelector("#totalPrices");
   const totalQuantity = document.querySelector("#totalQuantity");
   const stockEpuise = document.querySelector("#stockEpuise");
+
   total.innerHTML = `${products.length}`;
+
   const sumPrices = products.reduce(
     (accumulator, product) => accumulator + product.price,
     0
   );
   totalPrices.innerHTML = `$${sumPrices.toFixed(2)}`;
+
   const sumQuantity = products.reduce(
     (accumulator, product) => accumulator + product.quantity,
     0
@@ -22,32 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const outOfStockCount = outOfStockProducts.length;
   stockEpuise.innerHTML = `${outOfStockCount}`;
-});
+}
 
-const productTableBody = document.querySelector("#productTableBody tbody");
-products.forEach((product) => {
+function createRow(product) {
   const row = document.createElement("tr");
   row.classList.add("hover:bg-gray-50");
 
-  const nameCell = document.createElement("td");
-  nameCell.classList.add("border-b", "bg-[#3090BF]", "text-white");
-  nameCell.innerHTML = product.name;
-
-  const priceCell = document.createElement("td");
-  priceCell.classList.add("border-b", "bg-[#3D7F66]", "text-white");
-  priceCell.innerHTML = `$${product.price}`;
-
-  const descriptionCell = document.createElement("td");
-  descriptionCell.classList.add("border-b", "bg-[#CF9F61]", "text-white");
-  descriptionCell.innerHTML = product.description;
-
-  const categoryCell = document.createElement("td");
-  categoryCell.classList.add("border-b", "bg-[#5A9413]", "text-white");
-  categoryCell.innerHTML = product.category;
-
-  const quantityCell = document.createElement("td");
-  quantityCell.classList.add("border-b", "bg-[#AD1D97]", "text-white");
-  quantityCell.innerHTML = product.quantity;
+  const nameCell = createCell(product.name, "bg-[#3090BF]");
+  const priceCell = createCell(`$${product.price}`, "bg-[#3D7F66]");
+  const descriptionCell = createCell(product.description, "bg-[#CF9F61]");
+  const categoryCell = createCell(product.category, "bg-[#5A9413]");
+  const quantityCell = createCell(product.quantity, "bg-[#AD1D97]");
 
   const actionsCell = document.createElement("td");
   actionsCell.classList.add(
@@ -60,31 +52,16 @@ products.forEach((product) => {
     "bg-[#FAC0B4]"
   );
 
-  const updateButton = document.createElement("button");
-  updateButton.classList.add(
+  const updateButton = createButton(
+    "Update",
     "bg-yellow-600",
-    "hover:bg-yellow-500",
-    "text-white",
-    "py-1",
-    "px-3",
-    "rounded",
-    "shadow-md",
-    "font-semibold"
+    "hover:bg-yellow-500"
   );
-  updateButton.textContent = "Update";
+  const deleteButton = createButton("Delete", "bg-red-600", "hover:bg-red-500");
 
-  const deleteButton = document.createElement("button");
-  deleteButton.classList.add(
-    "bg-red-600",
-    "hover:bg-red-500",
-    "text-white",
-    "py-1",
-    "px-3",
-    "rounded",
-    "shadow-md",
-    "font-semibold"
-  );
-  deleteButton.textContent = "Delete";
+  deleteButton.onclick = function () {
+    deleteProduct(product.id);
+  };
 
   actionsCell.appendChild(updateButton);
   actionsCell.appendChild(deleteButton);
@@ -96,5 +73,48 @@ products.forEach((product) => {
   row.appendChild(quantityCell);
   row.appendChild(actionsCell);
 
-  productTableBody.appendChild(row);
-});
+  return row;
+}
+
+function createCell(content, bgColor) {
+  const cell = document.createElement("td");
+  cell.classList.add("border-b", "text-white", bgColor);
+  cell.innerHTML = content;
+  return cell;
+}
+
+function createButton(text, bgColor, hoverColor) {
+  const button = document.createElement("button");
+  button.classList.add(
+    bgColor,
+    hoverColor,
+    "text-white",
+    "py-1",
+    "px-3",
+    "rounded",
+    "shadow-md",
+    "font-semibold"
+  );
+  button.textContent = text;
+  return button;
+}
+
+function deleteProduct(productId) {
+  const index = products.findIndex((product) => product.id === productId);
+  if (index > -1) {
+    products.splice(index, 1);
+    renderTable();
+    updateStatistics();
+  }
+}
+
+function renderTable() {
+  const productTableBody = document.querySelector("#productTableBody tbody");
+  productTableBody.innerHTML = "";
+  products.forEach((product) => {
+    const row = createRow(product);
+    productTableBody.appendChild(row);
+  });
+}
+
+renderTable();
