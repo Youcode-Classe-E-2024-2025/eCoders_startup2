@@ -795,11 +795,23 @@ video {
   position: relative;
   height: 90%;
   width: 90%;
+  cursor: pointer;
   overflow: hidden;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   --tw-shadow-color: #9ca3af;
+  --tw-shadow: var(--tw-shadow-colored);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.product .product-box:hover {
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-shadow-color: #22c55e;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1169,8 +1181,8 @@ video {
   height: 28px;
 }
 
-.h-\[500px\] {
-  height: 500px;
+.h-\[800px\] {
+  height: 800px;
 }
 
 .h-fit {
@@ -1261,6 +1273,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .max-w-lg {
@@ -1528,11 +1544,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-blue-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
-}
-
 .bg-orange-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 215 170 / var(--tw-bg-opacity));
@@ -1541,6 +1552,11 @@ video {
 .bg-purple-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(233 213 255 / var(--tw-bg-opacity));
+}
+
+.bg-purple-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
 .bg-slate-100 {
@@ -2156,22 +2172,6 @@ body {
 }
 
 @media (max-width: 800px) {
-  .max-800\:left-1 {
-    left: 0.25rem;
-  }
-
-  .max-800\:left-2 {
-    left: 0.5rem;
-  }
-
-  .max-800\:left-2\/4 {
-    left: 50%;
-  }
-
-  .max-800\:left-3 {
-    left: 0.75rem;
-  }
-
   .max-800\:left-2\/3 {
     left: 66.666667%;
   }
@@ -2184,28 +2184,8 @@ body {
     display: none;
   }
 
-  .max-800\:h-6 {
-    height: 1.5rem;
-  }
-
-  .max-800\:h-8 {
-    height: 2rem;
-  }
-
-  .max-800\:w-6 {
-    width: 1.5rem;
-  }
-
-  .max-800\:w-8 {
-    width: 2rem;
-  }
-
   .max-800\:justify-around {
     justify-content: space-around;
-  }
-
-  .max-800\:rounded-full {
-    border-radius: 9999px;
   }
 
   .max-800\:text-xl {

@@ -1,21 +1,6 @@
 import {productsData} from "../Data/data.js"
 
-//Mobile Menu--------------------------------------------
-const mobileMenu = document.querySelector('.mobile-menu');
-const mobileLinks = document.querySelector('.mobile-menu--links');
-function showMobileMenu(e){
-    e.stopPropagation();
-    mobileLinks.classList.toggle('invisible');
-    mobileLinks.classList.toggle('left-[-100px]')
-    mobileLinks.classList.toggle('opacity-0')
-}
-mobileMenu.addEventListener('click',showMobileMenu);
-document.addEventListener('click',e=>{
-    mobileLinks.classList.add('invisible');
-    mobileLinks.classList.add('left-[-100px]')
-    mobileLinks.classList.add('opacity-0') 
-})
-//Mobile Menu--------------------------------------------
+
 
 
 //landing carrousel--------------------------------------
@@ -76,9 +61,11 @@ const bestSelling = productsData.sort((a,b)=>b.rating-a.rating).slice(0,9);
 const newestProducts = productsData.sort((a,b)=>new Date(b.dateOfAdd)-new Date(a.dateOfAdd)).slice(0,9);
 
 
-const productsImages = document.querySelectorAll('#best-selling img');
+const bestProductsImages = document.querySelectorAll('#best-selling img');
+const newProductsImages = document.querySelectorAll('#new-products img');
 
-bestSelling.forEach((p,i)=>productsImages[i].src = `assets/Data/${p.img}`)
+bestSelling.forEach((p,i)=>bestProductsImages[i].src = `assets/images/${p.img}`);
+newestProducts.forEach((p,i)=>newProductsImages[i].src = `assets/images/${p.img}`);
 
 function initializeCarousel(carouselContainer,delay) {
     const products = carouselContainer.querySelectorAll('.product');
@@ -103,7 +90,13 @@ function initializeCarousel(carouselContainer,delay) {
     setTimeout(()=>{
         csId = setInterval(()=>changeProductSlide(1),3000)
     },delay)
-    
+    //stop when hovered
+    slidesContainer.addEventListener('mouseenter',()=>{
+        clearInterval(csId);
+    })
+    slidesContainer.addEventListener('mouseleave',()=>{
+        csId = setInterval(()=>changeProductSlide(1),3000);
+    })
     // Set up event listeners for arrows
     productsArrowLeft.addEventListener('click', () => {
         changeProductSlide(-1);
