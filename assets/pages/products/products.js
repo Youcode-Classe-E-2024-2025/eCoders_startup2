@@ -1,6 +1,10 @@
-import { products } from '../../Data/data.js';
+import { productsData } from '../../Data/data.js';
 
+
+
+let products = productsData;
 console.log(products);
+
 
 // Display a single product card
 function cardDisplay(product) {
@@ -107,7 +111,7 @@ SortByOrder.addEventListener("change", function() {
     
 // }
 let next=document.getElementById('next');
-let pre=document.getElementById('previeus');
+let pre=document.getElementById('previous');
 
 let counter=0;
 // function pagineTEST(y){

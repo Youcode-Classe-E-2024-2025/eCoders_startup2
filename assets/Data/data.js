@@ -1,4 +1,4 @@
-export const products = [
+export const productsData = [
     // New Balance
     {id: 1, name: "990v5", price: 166.43, img: "NB1.webp", gallerie: ["NB11.webp", "NB12.webp", "NB13.webp"], description: "Luxury sport shoe", category: "New Balance", quantity: 10, colors: ["#00443F", "#B9975E", "#3C6E72", "#E5E4DB"]},
     {id: 2, name: " Foam 1080v12", price: 189.99, img: "NB2.webp", gallerie: ["NB21.webp", "NB22.webp", "NB23.webp"], description: "Comfortable running shoe", category: "New Balance", quantity: 5, colors: ["#111315"]},
@@ -40,11 +40,6 @@ export const products = [
     {id: 34, name: "Runfalcon", price: 65, img: "Runfalcon.png", gallerie: ["Runfalcon-1.png", "Runfalcon-2.png", "Runfalcon-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
     {id: 35, name: "OZMILLEN", price: 110, img: "OZMILLEN.png", gallerie: ["OZMILLEN-1.png", "OZMILLEN-2.png", "OZMILLEN-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
     {id: 36, name: "Kaptir", price: 90, img: "Kaptir.png", gallerie: ["Kaptir-1.png", "Kaptir-2.png", "Kaptir-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
-    {id: 34, name: "Runfalcon", price: 65, img: "Runfalcon.png", gallerie: ["Runfalcon-1.png", "Runfalcon-2.png", "Runfalcon-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
-    {id: 35, name: "OZMILLEN", price: 110, img: "OZMILLEN.png", gallerie: ["OZMILLEN-1.png", "OZMILLEN-2.png", "OZMILLEN-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"},
-    {id: 36, name: "Kaptir", price: 90, img: "Kaptir.png", gallerie: ["Kaptir-1.png", "Kaptir-2.png", "Kaptir-3.png"], description: "Style décontracté et classique.", category: "adidas", quantity: 12, color: "#A52A2A"}
-    
-
-
+   
 
 ];
