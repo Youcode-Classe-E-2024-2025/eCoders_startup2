@@ -45,4 +45,4 @@ console.log(storedProducts);
 ];
 
 
-localStorage.setItem('products', JSON.stringify(products));
+localStorage.setItem('products', JSON.stringify(productsData));
