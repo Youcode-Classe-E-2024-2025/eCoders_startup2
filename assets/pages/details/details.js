@@ -18,6 +18,8 @@ const productId = searchParams.get('id');
 const productObject = productsData.find(p=>p.id === +productId);
 
 
+
+
 imgOff.src = "../../images/"+productObject.img;
 imgSec1.src = "../../images/"+productObject.gallerie[0];
 imgSec2.src = "../../images/"+productObject.gallerie[1];
