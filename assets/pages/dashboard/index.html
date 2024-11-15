@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <title>Ecoders Dashboard</title>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-white p-4 shadow-md flex items-center justify-between">
+      <h1 class="text-xl font-bold">Ecoders Dashboard</h1>
+      <img
+        class="w-14 shadow-lg"
+        src="../../images/logo.png"
+        alt="ECODERS LOGO"
+      />
+    </header>
+    <main class="p-4">
+      <section class="bg-white p-4 shadow-md rounded-md mb-4">
+        <h2 class="text-lg font-semibold mb-2">Monthly Statistics</h2>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="bg-[#08b642] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Total Products</p>
+            <p id="totalProduct" class="text-xl font-semibold"></p>
+          </div>
+          <div
+            class="bg-[#15aaf5] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Total Prices</p>
+            <p id="totalPrices" class="text-xl font-semibold"></p>
+          </div>
+          <div
+            class="bg-[#f5d015] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Total Quantity</p>
+            <p id="totalQuantity" class="text-xl font-semibold"></p>
+          </div>
+          <div
+            class="bg-[#f5153a] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Stock épuisé</p>
+            <p id="stockEpuise" class="text-xl font-semibold"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white p-4 shadow-md rounded-md">
+        <h2 class="text-lg font-semibold mb-2">Product Inventory</h2>
+        <div class="flex justify-center">
+          <button
+            class="bg-green-600 hover:bg-green-700 text-white lg:w-[120px] sm:w-[30px] md:w-[75px] border-b shadow-md rounded cursor-pointer p-2 font-bold"
+          >
+            Add Product
+          </button>
+        </div>
+        <br />
+        <div class="overflow-auto">
+          <table
+            id="productTableBody"
+            class="min-w-full bg-white border border-gray-200 text-sm"
+          >
+            <thead>
+              <tr class="bg-gray-200 text-center">
+                <th class="py-2 px-4 border-b">Name</th>
+                <th class="py-2 px-4 border-b">Price</th>
+                <th class="py-2 px-4 border-b">Description</th>
+                <th class="py-2 px-4 border-b">Category</th>
+                <th class="py-2 px-4 border-b">Quantity</th>
+                <th id="Actions" class="py-2 px-4 border-b text-center">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr class="hover:bg-gray-50"></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="../../Data/data.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

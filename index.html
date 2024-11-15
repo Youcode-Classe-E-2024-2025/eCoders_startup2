@@ -1,368 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home Page</title>
-        <link rel="stylesheet" href="assets/CSS/style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jura:wght@300..700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header class="bg-split-70-30">
-            <nav class="w-full bg-split-70-30 text-base 2xl:text-2xl">
-                <div class="cnt py-6 flex gap-10 items-center px-5">
-                    <a href="index.html" class="text-xl  md:text-3xl  font-semibold  2xl:text-4xl"><img src="assets/images/logo.png" class="w-10 md:w-12 xl:w-16" alt="logo"></a>
-                    <ul class="hidden md:flex items-center">
-                        <li><a href="assets/pages/products/products.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">Products</a>
-                        </li>
-                        <li><a href="assets/pages/about/about.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">About</a>
-                        </li>
-                        <li><a href="assets/pages/contact/contact.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="mobile-menu block md:hidden relative">
-                        <div class="text-3xl cursor-pointer hover:scale-110 transition-transform select-none">&#9776;</div>
-                        <ul class="mobile-menu--links absolute z-30 top-[150%] left-0 left-[-100px] flex flex-col gap-1 transition-all invisible opacity-0">
-                            <li><a href="assets/pages/products/products.html" class="block text-base pl-6 pr-16 py-2 bg-stone-800 text-white  hover:bg-slate-300 hover:text-black transition-colors">Products</a></li>
-                            <li><a href="assets/pages/about/about.html" class="block text-base pl-6 pr-16 py-2 bg-stone-800 text-white hover:bg-slate-300 hover:text-black transition-colors">About</a></li>
-                            <li><a href="assets/pages/contact/contact.html" class="block text-base pl-6 pr-16 py-2 bg-stone-800  text-white hover:bg-slate-300 hover:text-black transition-colors">Contact</a></li>
-                        </ul>
-                    </div>
-                    <a href="assets/pages/cart/cart.html" class="ml-auto px-4 py-2 hover:bg-slate-300 transition-colors shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="profile rounded-full overflow-hidden w-10 h-10 2xl:w-14 2xl:h-14 bg-slate-400 shadow-sm shadow-black">
-                        <!-- <img src="" alt="profile"> -->
-                    </a>
-                </div>
-            </nav>
-            <section id="landing-section">
-                    <div class="landing-carrousel">
-                        <div class="landing-carrousel-arrows flex gap-1 md:gap-3 absolute top-4 right-10 md:top-3 md:right-20 ">
-                            <button class="arrow arrow-left "><</button>
-                            <button class="arrow arrow-right ">></button>
-                        </div>
-                        <div class="landing-carrousel-dots "></div>
-                        <div class="landing-slides ">
-                            <div class="landing-slide ">
-                                <img  src="assets/images/emptyimg.jpg" alt="">
-                            </div>
-                            <div class="landing-slide">
-                                <img  src="assets/images/carrousel-img1.jpg" alt="">
-                            </div>
-                            <div class="landing-slide ">
-                                <img  src="assets/images/carrousel-img2.jpg" alt="">
-                            </div>
-                            <div class="landing-slide ">
-                                <img  src="assets/images/carrousel-img3.jpg" alt="">
-                            </div>
-                            <div class="landing-slide ">
-                                <img  src="assets/images/emptyimg.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </header>
-            <section id="description">
-                <div class="cnt landing-description flex flex-col sm:flex-row sm:justify-center sm:justify-items-center lg:justify-between   py-7 flex-wrap gap-y-5 sm:px-2 ">
-                    <div class=" description-item  ">
-                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M400 0L176 0c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8L24 64C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9L192 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-26.1 0C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24L446.4 64c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112l84.4 0c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6l84.4 0c-5.1 66.3-31.1 111.2-63 142.3z"/></svg>
-                        <div>
-                          <h3>High Quality</h3>
-                          <p>crafted from top materials</p>
-                        </div>
-                    </div>
-                    <div class="sm:justify-end lg:justify-center description-item  ">
-                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
-                        <div>
-                          <h3>Warranty Protection</h3>
-                          <p>Over 2 years</p>
-                        </div>
-                    </div>
-                    <div class="description-item ">
-                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M112 0C85.5 0 64 21.5 64 48l0 48L16 96c-8.8 0-16 7.2-16 16s7.2 16 16 16l48 0 208 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L64 160l-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l16 0 176 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L64 224l-48 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l48 0 144 0c8.8 0 16 7.2 16 16s-7.2 16-16 16L64 288l0 128c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L112 0zM544 237.3l0 18.7-128 0 0-96 50.7 0L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"/></svg>
-                        <div>
-                          <h3>Free Shipping</h3>
-                          <p>Order over $150</p>
-                        </div>
-                    </div>
-                    <div class="sm:justify-end lg:justify-center description-item ">
-                        <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M256 48C141.1 48 48 141.1 48 256l0 40c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-40C0 114.6 114.6 0 256 0S512 114.6 512 256l0 144.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24l-32 0c-26.5 0-48-21.5-48-48s21.5-48 48-48l32 0c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40L464 256c0-114.9-93.1-208-208-208zM144 208l16 0c17.7 0 32 14.3 32 32l0 112c0 17.7-14.3 32-32 32l-16 0c-35.3 0-64-28.7-64-64l0-48c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64l0 48c0 35.3-28.7 64-64 64l-16 0c-17.7 0-32-14.3-32-32l0-112c0-17.7 14.3-32 32-32l16 0z"/></svg>
-                        <div>
-                          <h3 >24 / 7 Support</h3>
-                          <p >Dedicated support</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <main>
-                <section id="best-selling">
-                    <div class="cnt">
-                        <h3 class="w-fit mx-auto text-base sm:text-xl font-medium mb-8 ">#BEST SELLING</h3>
-                        <div class="relative product-carrousel w-[80%] mx-auto">
-                            <button class="carrousel-arrow arrow-left translate-x-[-40%] left-0"><</button>
-                            <button class="carrousel-arrow arrow-right translate-x-[40%] right-0">></button>
-                            <div class="slides-container">   
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img1.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img2.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img3.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img4.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img5.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img6.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img7.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img8.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img9.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="new-products">
-                    <div class="cnt">
-                        <h3 class="w-fit mx-auto text-base sm:text-xl font-medium mb-8 mt-8 ">#NEW PRODUCTS</h3>
-                        <div class="relative product-carrousel w-[80%] mx-auto">
-                            <button class="carrousel-arrow arrow-left translate-x-[-40%] left-0"><</button>
-                            <button class="carrousel-arrow arrow-right translate-x-[40%] right-0">></button>
-                            <div class="slides-container ">
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img10.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img11.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img12.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img13.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img14.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img15.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img16.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img17.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                                <div class="product">
-                                    <div class="product-box ">
-                                        <img  src="assets/images/img18.jpg" alt="">
-                                        <div class="product-text ">
-                                            <h3 >Title</h3>
-                                            <p >Description</p>
-                                            <span >$PRICE</span>
-                                        </div>
-                                    </div>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                
-                
-            </main>
-        <footer class="mt-36 px-10">
-            <div class="cnt text-center sm:text-start py-12 border-t-[1px] border-solid border-black">
-                <div class=" text-sm sm:text-xs 2xl:text-xl grid grid-cols-1 sm:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-5">
-                    <div class="flex flex-col gap-1 sm:gap-2 sm:w-52 ">
-                        <div class="flex justify-center sm:justify-start"><img src="assets/images/logo.png" class="w-10 md:w-12 xl:w-16" alt="logo"></div>
-                        <p class="opacity-75">1100 S. Ocean Blvd Palm Beach, FL 33480</p>                                   
-                            <p class="opacity-75">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray" class="size-4 inline">
-                                    <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
-                                </svg>Palm Beach, FLORIDA
-                            </p>                                      
-                            <p class="opacity-75">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="gray" class="size-4 inline">
-                                    <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
-                                  </svg>1-731-494-8392
-                            </p>
-                        
-                    </div>
-                    <ul class="flex flex-col gap-1">
-                        <h3 class="font-semibold text-base 2xl:text-2xl">Menu</h3>
-                        <li><a href="assets/pages/products/products.html" class="opacity-75">Products</a></li>
-                        <li><a href="assets/pages/about/contact.html" class="opacity-75">contact</a></li>
-                        <li><a href="assets/pages/about/about.html" class="opacity-75">About us</a></li>
-                    </ul>
-                    <ul class="flex flex-col gap-1">
-                        <h3 class="font-semibold text-base 2xl:text-2xl">Account</h3>
-                        <li><a href="#" class="opacity-75">My Account</a></li>
-                        <li><a href="#" class="opacity-75">Checkout</a></li>
-                        <li><a href="assets/pages/cart/cart.html" class="opacity-75">My Cart</a></li>
-                        <li><a href="#" class="opacity-75">My catalog</a></li>
-                    </ul>
-                    <ul class="gap-1 flex flex-col">
-                        <h3 class="text-base font-semibold 2xl:text-2xl">Stay Connected</h3>
-                        <li><a href="#" class="opacity-75">Facebook</a></li>
-                        <li><a href="#" class="opacity-75">Instagram</a></li>
-                        <li><a href="#" class="opacity-75">Twitter</a></li>
-                    </ul>
-                    <form class="flex flex-col gap-4 sm:col-start-3 lg:col-start-5">
-                        <label class="text-base font-semibold  2xl:text-2xl" for="">Stay Updated</label>
-                        <div class="flex">
-                            <input type="email" class="outline-none bg-stone-100 w-40 pl-2 py-1" placeholder="Enter your email"/>
-                            <button class="flex justify-center items-center px-2 h-7 bg-[#e89f71]">
-                                <svg width="16" height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M496 16 15.88 208 195 289 448 64 223 317l81 179L496 16z" fill="#ffffff" class="fill-000000"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="assets/CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jura:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="h-[774px] bg-split-70-30">
+      <nav class="w-full bg-split-70-30 text-base 2xl:text-2xl">
+        <div class="cnt py-6 flex gap-10 items-center px-5">
+          <a href="index.html" class="text-2xl font-semibold 2xl:text-4xl"
+            >Funiro</a
+          >
+          <ul class="hidden md:flex items-center">
+            <li>
+              <a
+                href="assets/pages/products/products.html"
+                class="px-4 py-2 hover:bg-slate-300 transition-colors"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="assets/pages/about/about.html"
+                class="px-4 py-2 hover:bg-slate-300 transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="assets/pages/contact/contact.html"
+                class="px-4 py-2 hover:bg-slate-300 transition-colors"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="mobile-menu block md:hidden relative">
+            <div
+              class="text-3xl cursor-pointer hover:scale-110 transition-transform select-none"
+            >
+              &#9776;
             </div>
-        </footer>
-        <script src="assets/JS/mobile-menu.js"></script>
-        <script src="assets/JS/main.js" type="module"></script>
-        <script src="assets/Data/data.js" type="module"></script>
-
-    </body>
+            <ul
+              class="mobile-menu--links absolute top-[150%] left-[-100px] flex flex-col gap-2 transition-all invisible opacity-0"
+            >
+              <li>
+                <a
+                  href="assets/pages/products/products.html"
+                  class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="assets/pages/about/about.html"
+                  class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="assets/pages/contact/contact.html"
+                  class="block text-base px-6 py-2 bg-slate-100 bg-opacity-50 hover:bg-slate-300 transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a
+            href="assets/pages/cart/cart.html"
+            class="ml-auto px-4 py-2 hover:bg-slate-300 transition-colors shadow-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="#"
+            class="profile rounded-full overflow-hidden w-10 h-10 2xl:w-14 2xl:h-14 bg-slate-400 shadow-sm shadow-black"
+          >
+            <!-- <img src="" alt="profile"> -->
+          </a>
+        </div>
+      </nav>
+    </header>
+    <footer class="mt-12 px-10">
+      <div class="cnt py-12 border-t-[1px] border-solid border-black">
+        <div
+          class="footer-links text-[12px] 2xl:text-xl grid grid-cols-[repeat(2,1fr)] sm:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-10"
+        >
+          <div class="flex flex-col gap-2 w-52">
+            <h3 class="font-semibold text-base 2xl:text-2xl">Funiro.</h3>
+            <p>
+              Worldwide furniture store since 2020. We sell over 1000+ branded
+              products on our website
+            </p>
+            <p>Sawojajar Malang, Indonesia</p>
+            <p>+6289 456 3455</p>
+          </div>
+          <ul class="flex flex-col gap-2 w-fit">
+            <h3 class="font-semibold text-base 2xl:text-2xl">Menu</h3>
+            <li><a href="../products/products.html">Products</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Inspirations</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="#">Terms & Policy</a></li>
+          </ul>
+          <ul class="flex flex-col gap-2 w-fit">
+            <h3 class="font-semibold text-base 2xl:text-2xl">Account</h3>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="#">My catalog</a></li>
+          </ul>
+          <ul class="gap-2 flex flex-col">
+            <h3 class="text-base font-semibold 2xl:text-2xl">Stay Connected</h3>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+          </ul>
+          <form
+            class="flex flex-col gap-4 col-start-1 sm:col-start-3 lg:col-start-5"
+          >
+            <label
+              class="text-base font-semibold text-center 2xl:text-2xl"
+              for=""
+              >Stay Updated</label
+            >
+            <div class="flex">
+              <input
+                type="email"
+                class="outline-none bg-stone-100 w-[128px] h-[28px] pl-2 py-1 text-sm"
+              />
+              <button
+                class="flex justify-center items-center px-2 h-[28px] bg-[#e89f71]"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M496 16 15.88 208 195 289 448 64 223 317l81 179L496 16z"
+                    fill="#ffffff"
+                    class="fill-000000"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/JS/main.js"></script>
+  </body>
 </html>
