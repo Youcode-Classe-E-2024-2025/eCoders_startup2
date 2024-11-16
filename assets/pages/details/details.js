@@ -1,5 +1,7 @@
 import { productsData } from "../../Data/data.js";
 
+const productsArray = JSON.parse(localStorage.getItem('products')) || productsData;
+
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 
@@ -21,7 +23,7 @@ const images = [imgOff,imgSec1,imgSec2,imgSec3];
 const searchParams = new URLSearchParams(location.search);
 const productId = +searchParams.get('id');
 
-const productObject = productsData.find(p=>p.id === productId);
+const productObject = productsArray.find(p=>p.id === productId);
 
 
 
