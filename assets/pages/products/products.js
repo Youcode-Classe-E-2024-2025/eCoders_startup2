@@ -116,7 +116,10 @@ document.getElementById('ProductInput').addEventListener('input' , ()=>{
         cardDisplay(product);
     });
   }
-} )
+  else{
+      document.getElementById("productDisplay").innerHTML = "<p class='my-4 mx-auto'>No Product Found</p>";
+    }
+});
 
 document.getElementById("SortByOrder").addEventListener("change", function () {
   const selectedValue = this.value;
