@@ -3,7 +3,7 @@ loginBtn.addEventListener("click", function () {
   let userName = document.querySelector("#Username");
   let passWord = document.querySelector("#Password");
   if (userName.value === "Adminstrator" && passWord.value === "Ecoders") {
-    location.href = "../dashboard/dashboard.html";
+    location.href = "../dashboard/";
   } else {
     alert("Incorrect username or passwords!");
   }
