@@ -1,4 +1,4 @@
-// import {productsData} from '../../Data/data.js'
+import {productsData} from '../../Data/data.js'
 
 document.addEventListener("DOMContentLoaded", () => {
     window.onload = displayCart;
@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cart.length > 0) {
             cart.forEach(product => {
                 const productEL = document.createElement("div");
-                // productEL.setAttribute("data-id", product.id);
                 productEL.innerHTML = `
                     <div class="cart-item flex justify-between items-center pt-3.5 pr-4 pb-3.5 pl-2 rounded-xl shadow-md mb-6" data-id="${product.id}" data-price="${product.price}">
                         <div class="flex items-center">
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         } else {
-            productsContainer.innerHTML = '<p>Your cart is empty. Don’t miss out, shop now and fill your cart!</p>';
+            productsContainer.innerHTML = '<p>It looks like you haven’t added anything yet. Shop now and treat yourself!</p>';
         }
         updateCount();
         updatePrice();
