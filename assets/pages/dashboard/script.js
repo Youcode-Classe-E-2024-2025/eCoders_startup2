@@ -117,7 +117,7 @@ function createButton(text, bgColor, hoverColor , ID) {
 function deleteProduct(productId) {
   const index = productsArray.findIndex((product) => product.id == productId);
   if (index > -1) {
-    products.splice(index, 1);
+    productsArray.splice(index, 1);
     localStorage.setItem('products', JSON.stringify(productsArray));
   
     renderTable();
@@ -224,9 +224,11 @@ document.getElementById('addProduct').addEventListener('click', () => {
 document.getElementById('closeForm').addEventListener('click', () => {
   document.getElementById('addForm').classList.add('hidden');
 });
+// closeupdatepopUp
 
-
-
+document.getElementById('closeupdatepopUp').addEventListener('click', () => {
+  document.getElementById('updatepopUp').classList.add('hidden');
+});
 
 
 renderTable();
