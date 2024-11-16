@@ -130,9 +130,9 @@ document.getElementById("SortByOrder").addEventListener("change", function () {
   } else if (selectedValue === "Z") {
     theOne.sort((a, b) => b.name.localeCompare(a.name));
   } else if (selectedValue === "-") {
-    theOne.sort((a, b) => a.price - b.price);
-  } else {
     theOne.sort((a, b) => b.price - a.price);
+  } else {
+    theOne.sort((a, b) => a.price - b.price);
   }
 
   display();
