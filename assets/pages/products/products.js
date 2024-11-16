@@ -2,7 +2,10 @@
 // import { document } from "postcss";
 import { productsData } from "../../Data/data.js";
 
-const products = JSON.parse(localStorage.getItem('products')) || productsData;
+const filteredProducts = JSON.parse(localStorage.getItem('products')) || productsData;
+
+
+const products = filteredProducts.filter(product => product.quantity > 0);
 
 // console.log(products);
 
