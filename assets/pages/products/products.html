@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="../../images/logo.webp"
+            type="image/x-icon"
+        />
         <title>Products Page</title>
        
         <link rel="stylesheet" href="product.css" />
@@ -46,14 +51,19 @@
 
 
         <main class="   h-fit  w-[90%] m-auto   ">
+
+            <section class="w-full h-10 bg-black">
+
+            </section>
           
             <section class="w-full h-fit flex items-center justify-between mb-16 max-800:justify-around" id="filter_search">
              <div class="filterContainer  flex items-center" id="filterContainer">
                <select name="filter" class="bg-[#ffffff]  border border-[#E89F71] text-[#E89F71] w-full h-full  py-1  text-center appearance-none outline-none"   id="fiterByCategorie"> 
                 <option value=""  disabled selected hidden>FILTER BY</option>
+                <option value="All">All product</option>
                 <option value="New Balance">New Balance</option>
-                <option value="Women">Adidas</option>
-                <option value="Kids">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="nike">Nike</option>
                </select>
                <span class=" h-fit w-fit   text-black   -ml-8 mt-1  ">
                 <img class=" h-[15px] "  src="../../images/ArrowDown.png" alt="filter select arrow">
@@ -197,8 +207,14 @@ function pagineTEST(y){
     
 }
         </script> -->
-        <script   src="../../JS/main.js"></script>
+<<<<<<< HEAD
+        <script   src="../../JS/mobile-menu.js"></script>
         <script type="module"  src="../../Data/data.js"></script>
+=======
+        <script type="module" src="../../Data/data.js"></script>
+        <script  type="module"  src="../../JS/mobile-menu.js"></script>
+        
+>>>>>>> origin/productPage
         <script type="module"  src="products.js"></script>
     </body>
 </html>
