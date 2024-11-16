@@ -1659,6 +1659,14 @@ video {
   background-image: linear-gradient(to right, #F9F1E7 70%, #FCF8F3 70%);
 }
 
+.bg-\[url\(\'\.\.\/images\/loginBg\.\'\)\] {
+  background-image: url('../images/loginBg.');
+}
+
+.bg-\[url\(\'\.\.\/images\/loginBg\.webp\'\)\] {
+  background-image: url('../images/loginBg.webp');
+}
+
 .bg-cover {
   background-size: cover;
 }
