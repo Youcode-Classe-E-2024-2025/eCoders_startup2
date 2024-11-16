@@ -1,3 +1,14 @@
+let isLoggedIn = JSON.parse(localStorage.getItem('isLoggedIn')) || false;
+if(!isLoggedIn) location.href = "../login/login.html";
+function logout(){
+  isLoggedIn = false;
+  localStorage.setItem('isLoggedIn',isLoggedIn);  
+  location.href= "../login/login.html";
+}
+
+const btnLogout = document.querySelector('.btn-logout');
+btnLogout.addEventListener('click',logout)
+
 import { productsData } from "../../Data/data.js";
 let productCounter=36;
 const productsArray = JSON.parse(localStorage.getItem('products')) || productsData;
@@ -13,7 +24,7 @@ function updateStatistics() {
   const stockEpuise = document.querySelector("#stockEpuise");
 
   total.innerHTML = `${productsArray.length}`;
-  let pr = JSON.parse(localStorage.getItem('products'));
+  let pr = productsArray;
 
   const sumPrices = pr.reduce(
     (accumulator, product) => accumulator + product.price,
@@ -137,7 +148,7 @@ function addProduct() {
 
 function renderTable() {
   const productTableBody = document.querySelector("#productTableBody tbody");
-  let pr = JSON.parse(localStorage.getItem('products'));
+  let pr = productsArray;
   productTableBody.innerHTML = "";
   pr.forEach((product) => {
     const row = createRow(product);
