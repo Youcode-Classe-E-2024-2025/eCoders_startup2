@@ -1,7 +1,7 @@
 import {productsData} from "../Data/data.js"
 
 
-
+const productsArray = JSON.parse(localStorage.getItem('products')) || productsData;
 
 //landing carrousel--------------------------------------
 const landingSlides = document.querySelectorAll('.landing-slide');
@@ -56,9 +56,9 @@ landingCarrouselDots.addEventListener('click',e=>{
 
 //product carrousel--------------------------------------
 //getting 9 most rated products
-const bestSelling = productsData.sort((a,b)=>b.rating-a.rating).slice(0,9);
+const bestSelling = productsArray.sort((a,b)=>b.rating-a.rating).slice(0,9);
 //getting 9 newest products
-const newestProducts = productsData.sort((a,b)=>new Date(b.dateOfAdd)-new Date(a.dateOfAdd)).slice(0,9);
+const newestProducts = productsArray.sort((a,b)=>new Date(b.dateOfAdd)-new Date(a.dateOfAdd)).slice(0,9);
 
 const productsElements = document.querySelectorAll('.product-box');
 const bestProductsImages = document.querySelectorAll('#best-selling img');
