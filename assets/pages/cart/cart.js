@@ -1,4 +1,7 @@
-// import {productsData} from '../../Data/data.js'
+import {productsData} from '../../Data/data.js'
+
+const productsArr = JSON.parse(localStorage.getItem('products')) || productsData;
+
 
 document.addEventListener("DOMContentLoaded", () => {
     window.onload = displayCart;
@@ -26,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".products").addEventListener("input", event => {
             if (event.target.classList.contains("quantity")) {
                 updatePrice();
+                // updateQuantity(event);
             }
         });
 
@@ -51,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (cart.length > 0) {
             cart.forEach(product => {
                 const productEL = document.createElement("div");
-                // productEL.setAttribute("data-id", product.id);
                 productEL.innerHTML = `
                     <div class="cart-item flex justify-between items-center pt-3.5 pr-4 pb-3.5 pl-2 rounded-xl shadow-md mb-6" data-id="${product.id}" data-price="${product.price}">
                         <div class="flex items-center">
@@ -84,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         } else {
-            productsContainer.innerHTML = '<p>Your cart is empty. Don’t miss out, shop now and fill your cart!</p>';
+            productsContainer.innerHTML = '<p>It looks like you haven’t added anything yet. Shop now and treat yourself!</p>';
         }
         updateCount();
         updatePrice();
@@ -142,13 +145,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const el = event.target.closest(".cart-item");
         const productId = el.dataset.id;
         const newQuantity = parseInt(event.target.value, 10) || 1;
-    
+        
+        
         const product = cart.find(item => item.id === productId);
         if (product) {
             product.quantity = newQuantity;
+            updateStock(productId, newQuantity);
             localStorage.setItem("cart", JSON.stringify(cart));
             updatePrice();
+            
         }
+        
     }
 
     function validateForm() {
@@ -283,6 +290,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     resetStorage(); 
+
+    function updateStock(productId, quantitySold) {
+        // const products = JSON.parse(localStorage.getItem("products")) || [];
+
+        const product = productsArr.find((item) => item.id === productId);
+    
+        // const product = products.find((item) => item.id === productId);
+        console.log(product.quantity);
+        
+        if (product) {
+            if (product.quantity >= quantitySold) {
+                product.quantity -= quantitySold;
+                console.log(`Quantité mise à jour : ${product.name} a maintenant ${product.quantity} en stock.`);
+    
+                localStorage.setItem("productsData", JSON.stringify(productsData));
+    
+            } else {
+                console.log(`Product ${product.name} is out of stock!`);
+            }
+        } else {
+            console.log("Product not found!");
+        }
+    }
+
+    
+    
     
 });
 
