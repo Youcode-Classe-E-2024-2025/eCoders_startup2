@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // eventListners();
-
     function eventListners() {
         document.querySelector(".checkout-btn").addEventListener("click", function (event) {
             if (cart.length !== 0) {
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".products").addEventListener("input", event => {
             if (event.target.classList.contains("quantity")) {
                 updatePrice();
-                // updateQuantity(event);
             }
         });
 
@@ -312,10 +309,6 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Product not found!");
         }
     }
-
-    
-    
-    
 });
 
 const url = new URLSearchParams(location.search)
