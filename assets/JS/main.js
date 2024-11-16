@@ -69,12 +69,13 @@ newestProducts.forEach((p,i)=>newProductsImages[i].src = `assets/images/${p.img}
 
 
 const productsObjects = [...bestSelling,...newestProducts];
+const url = window.location.origin + '/eCoders_startup2';
 productsElements.forEach((pe,i)=>{
     pe.querySelector('h3').textContent = productsObjects[i].name;
     pe.querySelector('p').textContent = productsObjects[i].description;
     pe.querySelector('span').textContent = '$'+productsObjects[i].price;
     pe.addEventListener('click',()=>{
-        location.href = `/eCoders_startup2/assets/pages/details/details.html?id=${productsObjects[i].id}`;
+        location.href = `${url}/assets/pages/details/details.html?id=${productsObjects[i].id}`;
     })
 })
 
