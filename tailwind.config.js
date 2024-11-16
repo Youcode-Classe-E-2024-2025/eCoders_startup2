@@ -17,6 +17,11 @@ module.exports = {
                  'max-1230': { 'max': '1230px' },
                 
               },
+              fontSize: {
+               '10px': '10px',
+                t:'10px,'
+                
+              },
               
         },
     },
