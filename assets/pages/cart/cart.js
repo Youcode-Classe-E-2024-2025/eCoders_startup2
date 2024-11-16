@@ -288,11 +288,9 @@ document.addEventListener("DOMContentLoaded", () => {
     resetStorage(); 
 
     function updateStock(productId, quantitySold) {
-        // const products = JSON.parse(localStorage.getItem("products")) || [];
 
         const product = productsArr.find((item) => item.id == productId);
     
-        // const product = products.find((item) => item.id === productId);
         console.log(product.quantity);
         
         if (product) {
