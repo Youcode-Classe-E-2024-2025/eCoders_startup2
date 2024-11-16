@@ -1,4 +1,4 @@
-import {productsData} from '../../Data/data.js'
+// import {productsData} from '../../Data/data.js'
 
 document.addEventListener("DOMContentLoaded", () => {
     window.onload = displayCart;
@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function displayCart() {
         const productsContainer = document.querySelector(".products");
-    
+
+
         if (cart.length > 0) {
             cart.forEach(product => {
                 const productEL = document.createElement("div");
@@ -127,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function deleteItem(ev) {
         const el = ev.target.closest(".cart-item");
-        const productId = el.getAttribute("data-id");
+        const productId = +el.dataset.id;
     
         cart = cart.filter(item => item.id !== productId);
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -282,6 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     resetStorage(); 
+    
 });
 
 const url = new URLSearchParams(location.search)
