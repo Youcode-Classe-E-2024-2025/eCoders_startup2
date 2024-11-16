@@ -210,7 +210,7 @@ document.getElementById('addProduct').addEventListener('click', () => {
   // Save updated array back to localStorage
   localStorage.setItem('products', JSON.stringify(products));
   
-  console.log(JSON.parse(localStorage.getItem('products')));
+  // console.log(JSON.parse(localStorage.getItem('products')));
   
   document.getElementById('addForm').classList.add('hidden');
 
