@@ -46,10 +46,28 @@
 
 
         <main class="   h-fit  w-[90%] m-auto   ">
-
-            <section class="w-full h-10 bg-black">
-
+            <section class="w-full h-10 flex items-center mb-4">
+                <div class="relative w-2/5 mx-auto flex">
+                    <input 
+                        type="text" 
+                        placeholder="Search products" 
+                        class="w-full h-10 pl-4 pr-10 border border-yellow-500 rounded-lg focus:outline-none focus:ring-2"
+                        id="ProductInput"
+                        />
+                    <div class="absolute inset-y-0 right-2 flex items-center">
+                        <img 
+                            src="../../images/image.png" 
+                            class="object-cover h-2/3 cursor-pointer" 
+                            alt="Search Icon"
+                            id="serachIcon"
+                        >
+                    </div>
+                </div>
             </section>
+            
+            
+            
+            
           
             <section class="w-full h-fit flex items-center justify-between mb-16 max-800:justify-around" id="filter_search">
              <div class="filterContainer  flex items-center" id="filterContainer">

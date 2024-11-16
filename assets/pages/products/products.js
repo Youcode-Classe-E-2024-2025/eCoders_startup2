@@ -1,4 +1,5 @@
 // localStorage.clear();
+// import { document } from "postcss";
 import { productsData } from "../../Data/data.js";
 
 const products = JSON.parse(localStorage.getItem('products')) || productsData;
@@ -30,7 +31,7 @@ function cardDisplay(product) {
         </div>
         <div class="absolute inset-0 bg-[#000000] opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
         <div class="cardButtons absolute inset-0 flex pt-7 flex-col justify-center gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <a href="../details/details.html?Id=${product.id}" class="w-full flex justify-center mb-3">
+            <a href="../details/details.html?id=${product.id}" class="w-full flex justify-center mb-3">
                 <button class="cardButtons bg-white text-[#E89F71] w-[70%] py-2 m-2 border font-medium" aria-label="Add to Cart">Add to Cart</button>
             </a>
         </div>
@@ -99,6 +100,16 @@ document.getElementById("fiterByCategorie").addEventListener("change", function 
   display();
   dissableTheButtons();
 });
+
+document.getElementById('serachIcon').addEventListener('click' , ()=>{
+  
+   let Pvalue  = document.getElementById('ProductInput').value ; 
+   console.log(Pvalue);
+   
+   let res = products.find((item) => item.name.includes(Pvalue));
+   document.getElementById("productDisplay").innerHTML = "";
+   cardDisplay(res);
+}  )
 
 document.getElementById("SortByOrder").addEventListener("change", function () {
   const selectedValue = this.value;

@@ -137,7 +137,7 @@ function addProduct() {
 
 function renderTable() {
   const productTableBody = document.querySelector("#productTableBody tbody");
-  let pr = JSON.parse(localStorage.getItem('products'));
+  let pr = productsArray ; 
   productTableBody.innerHTML = "";
   pr.forEach((product) => {
     const row = createRow(product);
