@@ -30,7 +30,7 @@ imgOff.src = "../../images/"+productObject.img;
 imgSec1.src = "../../images/"+productObject.gallerie[0];
 imgSec2.src = "../../images/"+productObject.gallerie[1];
 imgSec3.src = "../../images/"+productObject.gallerie[2];
-textTitle.src = productObject.name;
+textTitle.textContent = productObject.name;
 
 
 

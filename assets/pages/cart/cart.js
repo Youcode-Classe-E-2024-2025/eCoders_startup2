@@ -5,16 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    eventListners();
+    // eventListners();
 
     function eventListners() {
         document.querySelector(".checkout-btn").addEventListener("click", function (event) {
-            event.preventDefault();
+            if (cart.length !== 0) {
+                event.preventDefault();
         
-            if (validateForm()) {
-                if (confirm("Payment information is valid. Proceeding to payment...")) {
-                    document.querySelector(".download-btn").style.display = "block";
+                if (validateForm()) {
+                    if (confirm("Payment information is valid. Proceeding to payment...")) {
+                        document.querySelector(".download-btn").style.display = "block";
+                    }
                 }
+            }
+            else {
+                alert("Your cart is empty. Please add items to your cart before proceeding to payement.");
             }
         });
 
@@ -28,6 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll(".quantity").forEach(input => {
             input.addEventListener("input", updatePrice)
+        });
+
+        document.querySelectorAll(".delete-btn").forEach(btn => {
+            btn.addEventListener("click", deleteItem);
+        });
+    
+        document.querySelectorAll(".quantity").forEach(input => {
+            input.addEventListener("input", updateQuantity);
         });
     }
 
@@ -70,11 +83,11 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         } else {
-            productsContainer.innerHTML = '<p>Le panier est vide.</p>';
+            productsContainer.innerHTML = '<p>Your cart is empty. Don’t miss out, shop now and fill your cart!</p>';
         }
         updateCount();
         updatePrice();
-        attachEventListeners();
+        eventListners();
     }
 
     function updateCount() {
@@ -137,16 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function attachEventListeners() {
-        document.querySelectorAll(".delete-btn").forEach(btn => {
-            btn.addEventListener("click", deleteItem);
-        });
-    
-        document.querySelectorAll(".quantity").forEach(input => {
-            input.addEventListener("input", updateQuantity);
-        });
-    }
-
     function validateForm() {
         const name = document.getElementById("name").value.trim();
         const cardNumber = document.getElementById("card-number").value.trim();
@@ -203,10 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const doc = new jsPDF();
 
         const cartItems = document.querySelectorAll(".cart-item");
-        if (!cartItems || cartItems.length === 0) {
-            alert("Votre panier est vide !");
-            return;
-        }    
+          
         
         const subtotalElement = document.querySelector(".subtotal");
         const totalElement = document.querySelector(".total");
@@ -271,9 +271,11 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cartItems.length != 0) {
                 if (confirm("All items would be deleted from your cart. Are you sure ?")) {
                     localStorage.clear();
-                    alert("Le local storage a été réinitialisé !");
                     location.reload();
                 }
+            }
+            else {
+                alert("Your cart is already empty !");
             }
         });
 
