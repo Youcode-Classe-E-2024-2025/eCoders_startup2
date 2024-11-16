@@ -74,7 +74,7 @@ productsElements.forEach((pe,i)=>{
     pe.querySelector('p').textContent = productsObjects[i].description;
     pe.querySelector('span').textContent = '$'+productsObjects[i].price;
     pe.addEventListener('click',()=>{
-        location.href = `http://127.0.0.1:5500/assets/pages/details/details.html?id=${productsObjects[i].id}`;
+        location.href = `../assets/pages/details/details.html?id=${productsObjects[i].id}`;
     })
 })
 
