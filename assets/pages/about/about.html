@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Page</title>
-        <link rel="stylesheet" href="../../CSS/style.css" />
-    </head>
-    <body>
-      <header>
-        <nav class="w-full bg-split-70-30 text-base 2xl:text-2xl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Itim&family=Rubik+Wet+Paint&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="../../CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="w-full bg-split-70-30 text-base 2xl:text-2xl">
           <div class="cnt py-6 flex gap-10 items-center px-5">
               <a href="../../../index.html" class="text-xl  md:text-3xl  font-semibold  2xl:text-4xl"><img src="../../images/logo.webp" class="w-10 md:w-12 xl:w-16" alt="logo"></a>
               <ul class="hidden md:flex items-center">
                   <li><a href="../products/products.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">Products</a>
                   </li>
-                  <li><a href="../about/about.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">About</a>
+                  <li><a href="about.html" class="px-4 py-2 hover:bg-slate-300 transition-colors">About</a>
                   </li>
-                  <li><a href="../about/about.html#contact" class="px-4 py-2 hover:bg-slate-300 transition-colors">Contact</a>
+                  <li><a href="#contact" class="px-4 py-2 hover:bg-slate-300 transition-colors">Contact</a>
                   </li>
               </ul>
               <div class="mobile-menu block md:hidden relative">
@@ -24,7 +35,7 @@
                   <ul class="mobile-menu--links absolute z-30 top-[150%] left-0 left-[-100px] flex flex-col gap-1 transition-all invisible opacity-0">
                       <li><a href="../products/products.html" class="block text-base pl-6 pr-16 py-2 bg-stone-800 text-white  hover:bg-slate-300 hover:text-black transition-colors">Products</a></li>
                       <li><a href="about.html" class="block text-base pl-6 pr-16 py-2 bg-stone-800 text-white hover:bg-slate-300 hover:text-black transition-colors">About</a></li>
-                      <li><a href="contact" class="block text-base pl-6 pr-16 py-2 bg-stone-800  text-white hover:bg-slate-300 hover:text-black transition-colors">Contact</a></li>
+                      <li><a href="#contact" class="block text-base pl-6 pr-16 py-2 bg-stone-800  text-white hover:bg-slate-300 hover:text-black transition-colors">Contact</a></li>
                   </ul>
               </div>
               <a href="../cart/cart.html" class="ml-auto px-4 py-2 hover:bg-slate-300 transition-colors shadow-sm">
@@ -37,7 +48,165 @@
               </a>
           </div>
       </nav>
-    </header>
+  </header>
+    <!-- About Page -->
+    <main>
+      <section id="About" class="cnt">
+        <h1 class="flex justify-center text-xl font-semibold m-6 mb-10">
+          #About Us
+        </h1>
+
+        <div class="bg-[#F9F5F2] p-7 text-xl rounded-2xl mb-11">
+          <p class="font-medium">Chez ECODERS,</p>
+          <br />
+          <p>Nous croyons que chaque pas compte.</p>
+          <p>
+            Notre objectif ? Vous offrir les meilleures chaussures de sport,
+            alliant performance, confort et style.
+          </p>
+          <p>
+            Que vous soyez un passionné de course, de fitness ou un sportif de
+            haut niveau, nous avons la paire qu’il vous faut pour repousser vos
+            limites.
+          </p>
+          <p>
+            Avec des marques leaders, des designs innovants et un service
+            rapide, nous vous garantissons une expérience d’achat simple et
+            agréable.
+          </p>
+          <p>
+            Prêt à passer à l’action ? Rejoignez-nous et avancez avec confiance.
+          </p>
+        </div>
+      </section>
+      <!-- FAQ -->
+      <section id="faq">
+        <h2 class="flex justify-center text-xl font-semibold m-6 mb-10">
+          #Frequently Asked Questions
+        </h2>
+        <div class="faqs text-xl">
+          <div class="questions"></div>
+
+          <div class="faq-container cursor-pointer">
+            <div class="faq bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5">
+              <div class="flex question m-3 justify-between">
+                <h3 class="text-xl font-bold">
+                  Comment choisir la bonne taille pour mes chaussures de sport ?
+                </h3>
+                <i class="fa-regular fa-circle-down"></i>
+              </div>
+              <p class="reponse hidden text-[1.06rem] leading-6 font-light">
+                Nous vous recommandons de consulter notre guide des tailles
+                disponible sur chaque page produit. Vous y trouverez des
+                informations détaillées pour vous aider à choisir la taille qui
+                vous conviendra le mieux en fonction de vos mensurations.
+              </p>
+            </div>
+            <div class="faq bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5">
+              <div class="flex question m-3 justify-between">
+                <h3 class="text-xl font-bold">
+                  Les chaussures sont-ils adaptés à tous les types de sports ?
+                </h3>
+                <i class="fa-regular fa-circle-down"></i>
+              </div>
+              <p class="reponse hidden text-[1.06rem] leading-6 font-light">
+                Oui, nous proposons des chaussures conçus pour une variété de
+                sports, y compris le running, le yoga, la musculation, le
+                cyclisme, et plus encore. Chaque produit est spécifiquement
+                conçu pour répondre aux exigences de la discipline pour laquelle
+                il est destiné.
+              </p>
+            </div>
+            <div class="faq bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5">
+              <div class="flex question m-3 justify-between">
+                <h3 class="text-xl font-bold">
+                  Puis-je échanger ou retourner mes articles si je ne suis pas
+                  satisfait ?
+                </h3>
+                <i class="fa-regular fa-circle-down"></i>
+              </div>
+              <p class="reponse hidden text-[1.06rem] leading-6 font-light">
+                Oui, nous offrons une politique de retour et d'échange sous 30
+                jours à compter de la réception de votre commande, à condition
+                que les articles soient dans leur état d'origine, non portés et
+                non lavés. Consultez notre page "Retours et échanges" pour
+                connaître toutes les modalités.
+              </p>
+            </div>
+            <div class="faq bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5">
+              <div class="flex question m-3 justify-between">
+                <h3 class="text-xl font-bold">
+                  Offrez-vous la livraison gratuite ?
+                </h3>
+                <i class="fa-regular fa-circle-down"></i>
+              </div>
+              <p class="reponse hidden text-[1.06rem] leading-6 font-light">
+                Nous offrons la livraison gratuite pour toute commande
+                supérieure à [X]€ dans [votre pays] ou pour les membres de notre
+                programme fidélité. Pour les commandes inférieures à ce montant,
+                des frais de livraison s'appliquent. Consultez notre page
+                "Livraison" pour plus de détails.
+              </p>
+            </div>
+            <div class="faq bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5">
+              <div class="flex question m-3 justify-between">
+                <h3 class="text-xl font-bold">
+                  Quels types de paiements acceptez-vous ?
+                </h3>
+                <i class="fa-regular fa-circle-down"></i>
+              </div>
+              <p class="reponse hidden text-[1.06rem] leading-6 font-light">
+                Nous acceptons les paiements par carte bancaire (Visa,
+                Mastercard, American Express), PayPal, ainsi que d'autres
+                méthodes de paiement en ligne sécurisées. Vous pouvez consulter
+                les options disponibles lors du processus de paiement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section du contacts Us -->
+      <section class="contactUs">
+        <h2 class="flex justify-center text-xl font-semibold m-6 mb-10">
+          #Contact Us
+        </h2>
+        <form
+          class="flex justify-center align-middle bg-[#f9f5f2] rounded-2xl p-8 m-16 mb-3.5"
+        >
+          <div class="flex flex-col justify-center align-middle w-[60%]">
+            <label for="name" class="text-center text-xl font-bold mb-3.5"
+              >Name :</label
+            >
+            <input
+              type="text"
+              class="mb-3.5 p-2 rounded-xl border-2 border-solid border-black border-opacity-40"
+              placeholder="Enter your Name"
+            />
+            <label for="email" class="text-center text-xl font-bold mb-3.5"
+              >Email :</label
+            >
+            <input
+              type="email"
+              class="mb-3.5 p-2 rounded-xl border-2 border-solid border-black border-opacity-40"
+              placeholder="Enter your mail"
+            />
+            <label for="message" class="text-center text-xl font-bold mb-3.5"
+              >Message :</label
+            >
+            <textarea
+              type="message"
+              class="mb-3.5 p-2 border-2 border-solid border-black border-opacity-40 rounded-xl"
+              placeholder="Enter your message..."
+            ></textarea>
+            <button
+              class="bg-[#69306D] text-white w-fit mx-auto px-2 py-1 rounded-xl font-['IBM Plex Mono', monospace] shadow-md shadow-black hover:bg-purple-600"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
     <footer class="mt-12 px-10">
       <div class="cnt text-center sm:text-start py-12 border-t-[1px] border-solid border-black">
           <div class=" text-[10px] sm:text-xs 2xl:text-xl grid grid-cols-1 sm:grid-cols-[repeat(3,1fr)] lg:grid-cols-[repeat(5,1fr)] justify-items-center gap-y-5">
@@ -58,15 +227,15 @@
               </div>
               <ul class="flex flex-col gap-1">
                   <h3 class="font-semibold text-base 2xl:text-2xl">Menu</h3>
-                  <li><a href="../../pages/products/products.html" class="opacity-75">Products</a></li>
-                  <li><a href="about.html#contact" class="opacity-75">contact</a></li>
+                  <li><a href="../products/products.html" class="opacity-75">Products</a></li>
+                  <li><a href="#contact" class="opacity-75">contact</a></li>
                   <li><a href="about.html" class="opacity-75">About us</a></li>
               </ul>
               <ul class="flex flex-col gap-1">
                   <h3 class="font-semibold text-base 2xl:text-2xl">Account</h3>
                   <li><a href="#" class="opacity-75">My Account</a></li>
                   <li><a href="#" class="opacity-75">Checkout</a></li>
-                  <li><a href="../../pages/cart/cart.html" class="opacity-75">My Cart</a></li>
+                  <li><a href="../cart/cart.html" class="opacity-75">My Cart</a></li>
                   <li><a href="#" class="opacity-75">My catalog</a></li>
               </ul>
               <ul class="gap-1 flex flex-col">
@@ -89,7 +258,7 @@
           </div>
       </div>
   </footer>
-        <script src="../../JS/mobile-menu.js"></script>
-        <script src="about.js"></script>
-    </body>
+    <script src="../../JS/main.js"></script>
+    <script src="about.js"></script>
+  </body>
 </html>
