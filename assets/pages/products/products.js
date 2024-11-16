@@ -1,4 +1,5 @@
 // localStorage.clear();
+// import { document } from "postcss";
 import { productsData } from "../../Data/data.js";
 
 const products = JSON.parse(localStorage.getItem('products')) || productsData;
@@ -99,6 +100,16 @@ document.getElementById("fiterByCategorie").addEventListener("change", function 
   display();
   dissableTheButtons();
 });
+
+document.getElementById('serachIcon').addEventListener('click' , ()=>{
+  
+   let Pvalue  = document.getElementById('ProductInput').value ; 
+   console.log(Pvalue);
+   
+   let res = products.find((item) => item.name.includes(Pvalue));
+   document.getElementById("productDisplay").innerHTML = "";
+   cardDisplay(res);
+}  )
 
 document.getElementById("SortByOrder").addEventListener("change", function () {
   const selectedValue = this.value;
