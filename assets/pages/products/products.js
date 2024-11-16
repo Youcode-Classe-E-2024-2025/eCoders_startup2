@@ -1,5 +1,14 @@
-let products = JSON.parse(localStorage.getItem("products"));
-console.log(products);
+// localStorage.clear();
+import { productsData } from "../../Data/data.js";
+
+const products = JSON.parse(localStorage.getItem('products')) || productsData;
+
+// console.log(products);
+
+
+
+
+
 let theOne = products;
 let count = 0;
 const n = 12;

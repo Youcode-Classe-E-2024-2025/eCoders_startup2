@@ -1,7 +1,6 @@
-// import { products } from "../../Data/data.js";
+import { productsData } from "../../Data/data.js";
 let productCounter=36;
-let products = JSON.parse(localStorage.getItem('products'));
-console.log(products);
+const productsArray = JSON.parse(localStorage.getItem('products')) || productsData;
 
 document.addEventListener("DOMContentLoaded", function () {
   updateStatistics();
@@ -13,7 +12,7 @@ function updateStatistics() {
   const totalQuantity = document.querySelector("#totalQuantity");
   const stockEpuise = document.querySelector("#stockEpuise");
 
-  total.innerHTML = `${products.length}`;
+  total.innerHTML = `${productsArray.length}`;
   let pr = JSON.parse(localStorage.getItem('products'));
 
   const sumPrices = pr.reduce(
@@ -116,9 +115,11 @@ function createButton(text, bgColor, hoverColor , ID) {
 }
 
 function deleteProduct(productId) {
-  const index = products.findIndex((product) => product.id == productId);
+  const index = productsArray.findIndex((product) => product.id == productId);
   if (index > -1) {
     products.splice(index, 1);
+    localStorage.setItem('products', JSON.stringify(productsArray));
+  
     renderTable();
     updateStatistics();
   }
@@ -150,6 +151,7 @@ document.getElementById('updateProduct').addEventListener('click' , function upd
 
 
   
+  
 
   let q=document.getElementById('PQuantity').value;
   let p=document.getElementById('Pprice').value;
@@ -160,16 +162,17 @@ document.getElementById('updateProduct').addEventListener('click' , function upd
   }
   // console.log(p ,q);
 
-  const index = products.find((product) =>{ 
+  const index = productsArray.find((product) =>{ 
     if(product.id == productId)
     {
       product.price= +p;
       product.quantity= +q;
     }
-  
   });
 
-  localStorage.setItem('products', JSON.stringify(products));
+  localStorage.setItem('products', JSON.stringify(productsArray));
+  
+  
   document.getElementById('updatepopUp').classList.add('hidden');
   // console.log(index);
 
@@ -202,13 +205,13 @@ document.getElementById('addProduct').addEventListener('click', () => {
     dateOfAdd: document.getElementById('dateOfAdd').value.trim(),
   };
 
-  const products = JSON.parse(localStorage.getItem('products')) ;
+  // const products = JSON.parse(localStorage.getItem('products')) ;
   
   // Add new product
-  products.push(product);
+  productsArray.push(product);
   
   // Save updated array back to localStorage
-  localStorage.setItem('products', JSON.stringify(products));
+  localStorage.setItem('products', JSON.stringify(productsArray));
   
   // console.log(JSON.parse(localStorage.getItem('products')));
   
