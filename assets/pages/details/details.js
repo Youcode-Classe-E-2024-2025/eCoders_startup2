@@ -30,7 +30,7 @@ imgOff.src = "../../images/"+productObject.img;
 imgSec1.src = "../../images/"+productObject.gallerie[0];
 imgSec2.src = "../../images/"+productObject.gallerie[1];
 imgSec3.src = "../../images/"+productObject.gallerie[2];
-textTitle.src = productObject.name;
+textTitle.textContent = productObject.name;
 
 
 
@@ -93,12 +93,18 @@ sizeElementsContainer.addEventListener('click',e=>{
   e.target.classList.add('chosen-size');
 })
 
-
-
 btnAddToCart.addEventListener('click',()=>{
+  textColor.querySelector('.star')?.remove();
+  sizeElementsContainer.querySelector('.star')?.remove();
   if(!addedProduct.color || !addedProduct.size){
-    if(!addedProduct.color) textColor.insertAdjacentHTML('beforeend',"<span class='text-red-500'>*</span>")
-    if(!addedProduct.size) sizeElementsContainer.insertAdjacentHTML('beforeend',"<span class='text-red-500'>*</span>")
+    if(!addedProduct.color) {
+      textColor.querySelector('.star')?.remove();
+      textColor.insertAdjacentHTML('beforeend',"<span class='star text-red-500'>*</span>")
+    }
+    if(!addedProduct.size) {
+      sizeElementsContainer.querySelector('.star')?.remove();
+      sizeElementsContainer.insertAdjacentHTML('beforeend',"<span class='star text-red-500'>*</span>")
+    }
     return;  
   }
   const exist = cart.find(p=>p.id === addedProduct.id && p.size === addedProduct.size && p.color === addedProduct.color);
@@ -110,4 +116,3 @@ btnAddToCart.addEventListener('click',()=>{
   location.href = "http://127.0.0.1:5500/assets/pages/cart/cart.html";
 })
 console.log(cart);
-
