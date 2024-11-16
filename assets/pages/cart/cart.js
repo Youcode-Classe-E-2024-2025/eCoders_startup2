@@ -1,4 +1,4 @@
-import {productsData} from '../../Data/data.js'
+// import {productsData} from '../../Data/data.js'
 
 document.addEventListener("DOMContentLoaded", () => {
     window.onload = displayCart;
