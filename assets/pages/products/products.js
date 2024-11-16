@@ -104,12 +104,12 @@ document.getElementById("fiterByCategorie").addEventListener("change", function 
   dissableTheButtons();
 });
 
-document.getElementById('serachIcon').addEventListener('click' , ()=>{
+document.getElementById('ProductInput').addEventListener('input' , ()=>{
   
-   let Pvalue  = document.getElementById('ProductInput').value ; 
+   let Pvalue  = document.getElementById('ProductInput').value.toLowerCase(); ; 
    console.log(Pvalue);
    
-   let res = products.find((item) => item.name.includes(Pvalue));
+   let res = products.find((item) => item.name.toLowerCase().includes(Pvalue));
    document.getElementById("productDisplay").innerHTML = "";
    cardDisplay(res);
 }  )
