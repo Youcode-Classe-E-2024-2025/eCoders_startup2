@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../../images/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <title>Ecoders Dashboard</title>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-white p-4 shadow-md flex items-center justify-between">
+      <h1 class="text-xl font-bold">Ecoders Dashboard</h1>
+      <img
+        class="w-14 shadow-lg"
+        src="../../images/logo.png"
+        alt="ECODERS LOGO"
+      />
+    </header>
+    <main class="p-4 relative">
+
+      <section class="absolute w-full h-full bg-black opacity-90 flex  justify-center hidden" id="updatepopUp">
+        <div class="bg-white p-8 rounded-md shadow-lg text-center">
+          <h2 class="text-lg font-bold mb-4 text-gray-800">Update</h2>
+          <input 
+            type="number" 
+            placeholder="Quantity" 
+            class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="PQuantity"
+          />
+          <input 
+            type="number" 
+            placeholder="price" 
+            class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" id="Pprice"
+          />
+          <button 
+            class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition" id="updateProduct">
+            save
+          </button>
+          <button 
+          class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition" id="close">
+          close
+        </button>
+        </div>
+      </section>
+      <section class="fixed max-w-lg left-1/3 -top-1 bg-white p-4 rounded-md shadow-md text-sm hidden " id="addForm">
+        <h2 class="text-md font-bold mb-4 text-gray-700">Add Product</h2>
+      
+        <!-- Compact Form Fields -->
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Name -->
+          <input id="nameAdd" type="text" class="p-2 border rounded" placeholder="Name: Duramo" />
+          <!-- Price -->
+          <input id="priceAdd" type="number" class="p-2 border rounded" placeholder="Price: 90" />
+          <!-- Main Image -->
+          <input id="imgAdd" type="text" class="p-2 border rounded" placeholder="Image: Duramo.png" />
+          <!-- Gallery -->
+          <input id="gallerieAdd" type="text" class="p-2 border rounded" placeholder="Gallery: img1, img2" />
+          <!-- Description -->
+          <textarea id="descriptionAdd" class="p-2 border rounded col-span-2" placeholder="Description: Comfortable"></textarea>
+          <!-- Category -->
+          <select id="categoryAdd" class="p-2 border rounded">
+            <option value="" disabled selected>Category</option>
+            <option value="New Balance">New Balance</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+          </select>
+          <!-- Quantity -->
+          <input id="quantityAdd" type="number" class="p-2 border rounded" placeholder="Quantity: 11" />
+          <!-- Colors -->
+          <input id="colorsAdd" type="text" class="p-2 border rounded" placeholder="Colors: #000080" />
+          <!-- Details -->
+          <textarea id="detailsAdd" class="p-2 border rounded col-span-2" placeholder="Details: Versatile and comfy"></textarea>
+          <!-- Rating -->
+          <input id="ratingAdd" type="number" step="0.01" class="p-2 border rounded" placeholder="Rating: 0.82" />
+          <!-- Date -->
+          <input id="dateOfAdd" type="date" class="p-2 border rounded" />
+        </div>
+      
+        <!-- Buttons -->
+        <div class="flex justify-between mt-1">
+          <button 
+            id="addProduct" 
+            type="button" 
+            class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
+          >
+            Submit
+          </button>
+          <button 
+            id="closeForm" 
+            type="button" 
+            class="bg-gray-400 text-white py-2 px-4 rounded hover:bg-gray-500"
+          >
+            Close
+          </button>
+        </div>
+    </section>
+      
+      
+      <section class="bg-white p-4 shadow-md rounded-md mb-4">
+        <h2 class="text-lg font-semibold mb-2">Monthly Statistics</h2>
+        <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="bg-[#08b642] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Total Products</p>
+            <p id="totalProduct" class="text-xl font-semibold"></p>
+          </div>
+          <div
+            class="bg-[#15aaf5] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Total Prices</p>
+            <p id="totalPrices" class="text-xl font-semibold"></p>
+          </div>
+          <div
+            class="bg-[#f5d015] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Total Quantity</p>
+            <p id="totalQuantity" class="text-xl font-semibold"></p>
+          </div>
+          <div
+            class="bg-[#f5153a] p-3 rounded-md text-center text-white text-md font-bold"
+          >
+            <p class="text-md font-bold">Stock épuisé</p>
+            <p id="stockEpuise" class="text-xl font-semibold"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white p-4 shadow-md rounded-md">
+        <h2 class="text-lg font-semibold mb-2">Product Inventory</h2>
+        <div class="flex justify-center">
+          <button
+            class="bg-green-600 hover:bg-green-700 text-white lg:w-[120px] sm:w-[30px] md:w-[75px] border-b shadow-md rounded cursor-pointer p-2 font-bold"
+          id="showForm"
+            >
+            Add Product
+          </button>
+        </div>
+        <br />
+        <div class="overflow-auto">
+          <table
+            id="productTableBody"
+            class="min-w-full bg-white border border-gray-200 text-sm"
+          >
+            <thead>
+              <tr class="bg-gray-200 text-center">
+                <th class="py-2 px-4 border-b">Name</th>
+                <th class="py-2 px-4 border-b">Price</th>
+                <th class="py-2 px-4 border-b">Description</th>
+                <th class="py-2 px-4 border-b">Category</th>
+                <th class="py-2 px-4 border-b">Quantity</th>
+                <th id="Actions" class="py-2 px-4 border-b text-center">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr class="hover:bg-gray-50"></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="../../Data/data.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>

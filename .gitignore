@@ -1,2 +1,3 @@
-node_modules
-/assets/images
+assets/images/
+assets/Data/images/
+node_modules/
