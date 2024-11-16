@@ -115,6 +115,6 @@ btnAddToCart.addEventListener('click',()=>{
     cart.push(addedProduct);
   }else exist.quantity+=1;
   localStorage.setItem('cart',JSON.stringify(cart));
-  location.href = "http://127.0.0.1:5500/assets/pages/cart/cart.html";
+  location.href = "../../pages/cart/cart.html";
 })
 console.log(cart);
