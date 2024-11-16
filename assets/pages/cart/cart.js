@@ -146,16 +146,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const productId = el.dataset.id;
         const newQuantity = parseInt(event.target.value, 10) || 1;
         
-        
-        const product = cart.find(item => item.id === productId);
+
+        const product = cart.find(item => item.id == productId);
         if (product) {
             product.quantity = newQuantity;
             updateStock(productId, newQuantity);
+
             localStorage.setItem("cart", JSON.stringify(cart));
             updatePrice();
-            
         }
-        
     }
 
     function validateForm() {
@@ -294,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateStock(productId, quantitySold) {
         // const products = JSON.parse(localStorage.getItem("products")) || [];
 
-        const product = productsArr.find((item) => item.id === productId);
+        const product = productsArr.find((item) => item.id == productId);
     
         // const product = products.find((item) => item.id === productId);
         console.log(product.quantity);
