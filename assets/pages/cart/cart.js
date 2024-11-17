@@ -5,8 +5,9 @@ const productsArr = JSON.parse(localStorage.getItem('products')) || productsData
 
 document.addEventListener("DOMContentLoaded", () => {
     window.onload = displayCart;
-
+    
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    console.log(cart);
 
     function eventListners() {
         document.querySelector(".checkout-btn").addEventListener("click", function (event) {
@@ -15,7 +16,11 @@ document.addEventListener("DOMContentLoaded", () => {
         
                 if (validateForm()) {
                     if (confirm("Payment information is valid. Proceeding to payment...")) {
+                        updateStock();
+                        document.querySelector(".products").innerHTML = '<p>Thank you for your purchase! Your can now download your quote.</p>';
                         document.querySelector(".download-btn").style.display = "block";
+                        localStorage.removeItem("cart");
+                        updateCount();
                     }
                 }
             }
@@ -50,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         if (cart.length > 0) {
+            productsContainer.innerHTML = "";
             cart.forEach(product => {
                 const productEL = document.createElement("div");
                 productEL.innerHTML = `
@@ -143,28 +149,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const productId = el.dataset.id;
         const newQuantity = parseInt(event.target.value, 10) || 1;
         
-
         const product = cart.find(item => item.id == productId);
         console.log(product.quantity);
         
         if (product) {
             const max = productsArr.find((item) => item.id == productId);
-            console.log(max.quantity);
-            
-            // console.log(max);
-            
+
             if (max.quantity < newQuantity) {
                 alert(`Sorry, we only have ${max.quantity} of this item in stock.`);
                 event.target.value = product.quantity;
                 return;
             }
-            // if (max === 0) {
-            //     alert(`Sorry, we only have ${max} of this item in stock.`);
-            //     event.target.value = product.quantity;
-            //     return;
-            // }
+
             product.quantity = newQuantity;
-            updateStock(productId, newQuantity);
             
             localStorage.setItem("cart", JSON.stringify(cart));
             updatePrice();
@@ -226,13 +223,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        const cartItems = document.querySelectorAll(".cart-item");
-          
+        const cartItems = cart;          
         
         const subtotalElement = document.querySelector(".subtotal");
         const totalElement = document.querySelector(".total");
 
-        const countItems = cartItems.length;
+        const countItems = cart.length;
         const subtotal = subtotalElement.textContent;
         const total = totalElement.textContent;  
         const title = "Order Quotation";
@@ -257,9 +253,9 @@ document.addEventListener("DOMContentLoaded", () => {
         doc.setFont("helvetica", "normal")
         
         cartItems.forEach((el, index) => {
-            const itemName = el.querySelector(".item-name").textContent;
-            const quantity = el.querySelector(".quantity").value;
-            const itemPrice = el.querySelector(".item-price").textContent;
+            const itemName = el.name;
+            const quantity = el.quantity;
+            const itemPrice = el.price;
 
             posY += 10;
             if (posY + 40 > doc.internal.pageSize.height - 20) {
@@ -281,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
         doc.text(`Subtotal : ${subtotal}`, 20, posY + 10);
         doc.text(`Total (incl. shipping) : ${total}`, 20, posY + 20);
 
-        doc.save("devis.pdf");
+        doc.save("order-quotation.pdf");
     }
 
     function resetStorage() {
@@ -304,29 +300,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resetStorage(); 
 
-    function updateStock(productId, quantitySold) {
-
-        // const product = productsArr.find((item) => item.id == productId);
-
-        const storedProducts = JSON.parse(localStorage.getItem("productsData")) || [];
-        const productIndex = storedProducts.findIndex(item => item.id == productId);
-    
-        // console.log(product.quantity);
-        
-        if (product) {
-            if (product.quantity >= quantitySold) {
-                product.quantity -= quantitySold;
-                console.log(`Quantité mise à jour : ${product.name} a maintenant ${product.quantity} en stock.`);
-    
-                localStorage.setItem("productsData", JSON.stringify(productsData));
-    
-            } else {
-                console.log(`Product ${product.name} is out of stock!`);
+    function updateStock() {
+        cart.forEach(cartItem => {
+            const product = productsArr.find(item => item.id === cartItem.id);
+            if (product) {
+                product.quantity -= cartItem.quantity;
             }
-        } else {
-            console.log("Product not found!");
-        }
+        });
+        localStorage.setItem("products", JSON.stringify(productsArr));
     }
+
 });
 
 const url = new URLSearchParams(location.search)
