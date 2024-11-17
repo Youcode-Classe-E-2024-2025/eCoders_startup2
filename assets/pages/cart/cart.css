@@ -1,3 +1,14 @@
+.card-option.selected {
+    border: 2px solid #4de4c3;
+}
+
+@media (max-width: 1440px) {
+    .card-option svg {
+        width: 60px;
+        height: fit-content;
+    }
+}
+
 @media (max-width: 768px) {
     html {
       font-size: 10px;
@@ -6,7 +17,7 @@
       font-size: 1.3rem;
     }
     .card-type svg{
-      width: 6rem;
+      width: 5rem;
       height: 3rem;
     }
   }
@@ -29,11 +40,11 @@
       .expiration-cvv {
           justify-content: space-between;
       }
-      .card-type {
+      /* .card-type {
           justify-content: space-between;
-      }
+      } */
       .card-type svg{
-          width: 6rem;
+          width: fit-content;
           height: 3rem;
       }
   }

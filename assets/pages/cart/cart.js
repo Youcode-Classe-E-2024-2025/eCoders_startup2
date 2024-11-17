@@ -310,6 +310,14 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("products", JSON.stringify(productsArr));
     }
 
+    document.querySelectorAll(".card-option").forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll(".card-option").forEach(card => card.classList.remove('selected'));
+
+            item.classList.add('selected');
+        });
+    });
+
 });
 
 const url = new URLSearchParams(location.search)
