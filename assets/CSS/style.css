@@ -1199,8 +1199,8 @@ video {
   height: 66.666667%;
 }
 
-.h-24 {
-  height: 6rem;
+.h-20 {
+  height: 5rem;
 }
 
 .h-7 {
@@ -1209,6 +1209,10 @@ video {
 
 .h-\[15px\] {
   height: 15px;
+}
+
+.h-\[403px\] {
+  height: 403px;
 }
 
 .h-\[50\%\] {
@@ -2510,13 +2514,43 @@ body {
     display: none;
   }
 
+  .max-800\:h-10 {
+    height: 2.5rem;
+  }
+
+  .max-800\:h-4 {
+    height: 1rem;
+  }
+
+  .max-800\:h-8 {
+    height: 2rem;
+  }
+
+  .max-800\:w-8 {
+    width: 2rem;
+  }
+
   .max-800\:justify-around {
     justify-content: space-around;
+  }
+
+  .max-800\:gap-1 {
+    gap: 0.25rem;
+  }
+
+  .max-800\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .max-800\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .max-800\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
@@ -2539,20 +2573,24 @@ body {
     gap: 0px;
   }
 
-  .max-450\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .max-450\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-}
 
-@media (max-width: 1230px) {
-  .max-1230\:text-xs {
+  .max-450\:text-t {
+    font-size: 10px,;
+  }
+
+  .max-450\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }
+}
+
+@media (min-width: 1230px) {
+  .max-1230\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

@@ -14,7 +14,12 @@ module.exports = {
                 'max-800': { 'max': '800px' }, 
                 'max-950': { 'max': '950px' },
                 'max-450': { 'max': '550px' },
-                 'max-1230': { 'max': '1230px' },
+                 'max-1230': { 'min': '1230px' },
+                
+              },
+              fontSize: {
+               '10px': '10px',
+                t:'10px,'
                 
               },
               
