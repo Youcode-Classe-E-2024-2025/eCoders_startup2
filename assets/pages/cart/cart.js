@@ -145,10 +145,27 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         const product = cart.find(item => item.id == productId);
+        console.log(product.quantity);
+        
         if (product) {
+            const max = productsArr.find((item) => item.id == productId);
+            console.log(max.quantity);
+            
+            // console.log(max);
+            
+            if (max.quantity < newQuantity) {
+                alert(`Sorry, we only have ${max.quantity} of this item in stock.`);
+                event.target.value = product.quantity;
+                return;
+            }
+            // if (max === 0) {
+            //     alert(`Sorry, we only have ${max} of this item in stock.`);
+            //     event.target.value = product.quantity;
+            //     return;
+            // }
             product.quantity = newQuantity;
             updateStock(productId, newQuantity);
-
+            
             localStorage.setItem("cart", JSON.stringify(cart));
             updatePrice();
         }
@@ -289,9 +306,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateStock(productId, quantitySold) {
 
-        const product = productsArr.find((item) => item.id == productId);
+        // const product = productsArr.find((item) => item.id == productId);
+
+        const storedProducts = JSON.parse(localStorage.getItem("productsData")) || [];
+        const productIndex = storedProducts.findIndex(item => item.id == productId);
     
-        console.log(product.quantity);
+        // console.log(product.quantity);
         
         if (product) {
             if (product.quantity >= quantitySold) {
